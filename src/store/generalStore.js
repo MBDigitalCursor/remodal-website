@@ -3,15 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 export const generalSlice = createSlice({
 	name: "generalSlice",
 	initialState: {
-		testState: "",
+		activeNavLink: false,
 	},
 	reducers: {
-		setTestState: (state, action) => {
-			state.testState = action.payload;
+		setActiveNavLink: (state, action) => {
+			state.activeNavLink = action.payload;
 		},
 	},
 });
 
-export const { setTestState } = generalSlice.actions;
+export const { setActiveNavLink } = generalSlice.actions;
 
 export default generalSlice.reducer;

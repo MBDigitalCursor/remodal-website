@@ -20,5 +20,15 @@ nav {
 }
 
 .nav-container ul li {
+  cursor: pointer;
   font-size: 1.25rem;
+  transition: 0.2s;
+}
+
+.nav-container ul li:hover {
+  color: #55FC7B
+}
+
+.active-link {
+  color: #55FC7B
 }
