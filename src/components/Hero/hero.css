@@ -1,0 +1,25 @@
+.hero {
+  height: 70vh;
+  display: flex;
+  position: relative;
+}
+
+.hero-title {
+  color: white;
+  padding: 4.3rem 7rem;
+  text-align: left;
+}
+
+.hero-title h1 {
+  font-weight: 500;
+  font-size: 4.9rem;
+}
+
+.hero-right-side {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background: rgba(85, 252, 123, 0.71);
+  mix-blend-mode: normal;
+  box-shadow: 0px 0px 150px 120px rgba(85, 252, 123, 0.74)
+}
