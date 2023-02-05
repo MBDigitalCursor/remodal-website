@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { LineLoop } from "three";
-import { generalSlice, setActiveNavLink } from "../../store/generalStore";
+import { setActiveNavLink } from "../../store/generalStore";
 import "./nav.css";
 
 function Nav() {
@@ -16,7 +15,7 @@ function Nav() {
 
 	return (
 		<nav>
-			<div className="nav-container container">
+			<div className="nav container">
 				<p>remodal.</p>
 				<ul>
 					{links.map((link, i) => (

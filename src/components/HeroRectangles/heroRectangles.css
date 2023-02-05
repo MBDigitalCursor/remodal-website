@@ -1,0 +1,105 @@
+/* right side rectangles */
+
+.hero-right-side {
+  position: absolute;
+  background: rgba(85, 252, 123, 0.71);
+  box-shadow: 0px 0px 150px 120px rgba(85, 252, 123, 0.74);
+  right: 0;
+  top: 450px;
+  transform: rotate(90deg);
+}
+
+.bg-eclipse {
+  border-radius: 50%;
+  z-index: -10;
+  position: absolute;
+  width: 480px;
+  height: 530px;
+  left: -230px;
+  top: -400px;
+  background: rgba(85, 252, 123, 0.71);
+  mix-blend-mode: normal;
+  box-shadow: 0px 0px 150px 120px rgb(85 252 123 / 74%);
+}
+
+.sm-rectangle {
+  position: absolute;
+  width: 264px;
+  height: 126px;
+  top: -50%;
+  right: -120px;
+  background: rgba(54, 53, 53, 0.59);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  transform: rotate(90deg);
+
+}
+
+.lg-rectangle {
+  position: absolute;
+  width: 97px;
+  height: 550px;
+  top: -260px;
+  right: -50px;
+  background: rgba(49, 48, 48, 0.52);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  transform: rotate(90deg);
+}
+
+/* medium rectangle with search bar and circles */
+
+.md-rectangle {
+  position: absolute;
+  width: 202px;
+  height: 359px;
+  top: -150px;
+  right: -90px;
+  background: rgba(64, 64, 64, 0.83);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  transform: rotate(90deg);
+}
+
+.green-circle {
+  background: rgba(38, 170, 38, 0.2);
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 165px;
+  top: 340px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.red-circle {
+  background: rgba(178, 18, 18, 0.2);
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 185px;
+  top: 340px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.yellow-circle {
+  background: rgba(236, 170, 0, 0.2);
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 175px;
+  top: 340px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.search-bar {
+  position: absolute;
+  width: 90px;
+  height: 8px;
+  left: 71px;
+  top: 340px;
+  background: rgba(130, 128, 128, 0.3);
+  border-radius: 10px;
+}

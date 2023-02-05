@@ -1,12 +1,11 @@
 .hero {
   height: 70vh;
   display: flex;
-  position: relative;
+  padding: 4.3rem 7rem;
 }
 
 .hero-title {
   color: white;
-  padding: 4.3rem 7rem;
   text-align: left;
 }
 
@@ -22,14 +21,6 @@
   margin-bottom: 1.5rem;
 }
 
-.hero-right-side {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  background: rgba(85, 252, 123, 0.71);
-  mix-blend-mode: normal;
-  box-shadow: 0px 0px 150px 120px rgba(85, 252, 123, 0.74)
-}
 
 .hero-btn {
   font-family: 'Poppins', sans-serif;
