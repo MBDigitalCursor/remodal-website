@@ -9,6 +9,8 @@
   transform: rotate(90deg);
 }
 
+/* green glowing circle */
+
 .bg-eclipse {
   border-radius: 50%;
   z-index: -10;
@@ -22,6 +24,8 @@
   box-shadow: 0px 0px 150px 120px rgb(85 252 123 / 74%);
 }
 
+/* small horizontal rectangle */
+
 .sm-rectangle {
   position: absolute;
   width: 264px;
@@ -31,9 +35,9 @@
   background: rgba(54, 53, 53, 0.59);
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  transform: rotate(90deg);
-
 }
+
+/* large vertical rectangle */
 
 .lg-rectangle {
   position: absolute;
@@ -44,7 +48,6 @@
   background: rgba(49, 48, 48, 0.52);
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  transform: rotate(90deg);
 }
 
 /* medium rectangle with search bar and circles */
@@ -58,8 +61,70 @@
   background: rgba(64, 64, 64, 0.83);
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  transform: rotate(90deg);
+
 }
+
+
+/* lg-rectangle animation */
+
+.slide-in-top {
+  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateX(-1000px) rotate(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) rotate(90deg);
+    opacity: 1;
+  }
+}
+
+/* md-rectangle animation */
+
+.scale-in-hor-left {
+  animation: scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes scale-in-hor-left {
+
+  0% {
+    transform: scaleX(0) rotate(90deg);
+    transform-origin: 50% 100%;
+    opacity: 0;
+    background: rgba(85, 252, 123, 0.71);
+  }
+
+  100% {
+    transform: scaleX(1) rotate(90deg);
+    transform-origin: 50% 50%;
+    opacity: 1;
+    background: rgba(64, 64, 64, 0.83);
+  }
+}
+
+/* sm-rectangle animation */
+
+.slide-in-right {
+  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateY(-1000px) rotate(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);
+    opacity: 1;
+  }
+}
+
+/* search bar, circles */
 
 .green-circle {
   background: rgba(38, 170, 38, 0.2);
