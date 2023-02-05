@@ -10,8 +10,8 @@ function App() {
 	return (
 		<div className="App">
 			<Nav />
-			<Hero />
 			<HeroRectangles />
+			<Hero />
 			<About />
 		</div>
 	);

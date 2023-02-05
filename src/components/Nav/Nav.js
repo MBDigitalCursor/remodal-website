@@ -1,14 +1,20 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setActiveNavLink } from "../../store/generalStore";
+import { setActiveNavLink, setShowMobileNav } from "../../store/generalStore";
+import { FaBars } from "react-icons/fa";
+import { IoCloseSharp } from "react-icons/io5";
 import "./nav.css";
 
 function Nav() {
 	const dispatch = useDispatch();
-	const { activeNavLink } = useSelector((state) => state.generalSlice);
+	const { activeNavLink, showMobileNav } = useSelector((state) => state.generalSlice);
 
 	const handleLinkColor = (i) => {
 		dispatch(setActiveNavLink(i));
+	};
+
+	const openMobileNav = () => {
+		dispatch(setShowMobileNav(!showMobileNav));
 	};
 
 	const links = ["About", "Services", "Portfolio", "Contacts"];
@@ -17,7 +23,7 @@ function Nav() {
 		<nav>
 			<div className="nav container">
 				<p>remodal.</p>
-				<ul>
+				<div className={showMobileNav ? "links-container show" : "links-container hidden"}>
 					{links.map((link, i) => (
 						<li
 							key={i}
@@ -27,7 +33,18 @@ function Nav() {
 							{link}
 						</li>
 					))}
-				</ul>
+				</div>
+				{showMobileNav ? (
+					<IoCloseSharp
+						onClick={openMobileNav}
+						className="nav-close-btn"
+					/>
+				) : (
+					<FaBars
+						onClick={openMobileNav}
+						className=" nav-burger"
+					/>
+				)}
 			</div>
 		</nav>
 	);

@@ -4,28 +4,90 @@
   align-items: center;
   color: var(--primary-text-color);
   padding: 4.3rem 7rem;
-
 }
 
 .nav p {
   font-size: 1.7rem;
 }
 
-.nav ul {
+.links-container {
   display: flex;
   gap: 4.25rem;
 }
 
-.nav ul li {
+.links-container li {
   cursor: pointer;
   font-size: 1.25rem;
   transition: 0.2s;
+  list-style: none;
 }
 
-.nav ul li:hover {
+.links-container li:hover {
   color: #55FC7B
 }
 
 .active-link {
   color: #55FC7B
+}
+
+.nav-burger,
+.nav-close-btn {
+  display: none;
+  z-index: 3;
+  font-size: 1.5rem;
+}
+
+/* mobile menu animations */
+
+
+
+/* burger menu, responsive breakpoints */
+
+
+@media (max-width: 480px) {
+  .nav {
+    padding: var(--mobile-padding);
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .links-container.hidden {
+    display: none;
+  }
+
+  .links-container.show {
+    text-align: left;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    right: 0;
+    top: 0;
+    padding: 8rem 3rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background-color: var(--primary-bg-color);
+  }
+
+  .nav-burger,
+  .nav-close-btn {
+    display: block;
+  }
+
+  .nav-close-btn {
+    font-weight: bold;
+    color: var(--primary-text-color)
+  }
+
+  .nav {
+    align-items: baseline;
+    padding-bottom: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    z-index: 10;
+    gap: 1.5rem
+  }
 }
