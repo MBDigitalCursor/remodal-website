@@ -1,4 +1,4 @@
 .about {
-  color: white;
+  color: var(--primary-text-color);
   height: 100vh;
 }
