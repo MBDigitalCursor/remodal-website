@@ -23,7 +23,7 @@ function Nav() {
 		<nav>
 			<div className="nav container">
 				<p>remodal.</p>
-				<div className={showMobileNav ? "links-container show" : "links-container hidden"}>
+				<div className={showMobileNav ? "links-container show slide-in-right-nav" : "links-container hidden"}>
 					{links.map((link, i) => (
 						<li
 							key={i}
@@ -37,7 +37,7 @@ function Nav() {
 				{showMobileNav ? (
 					<IoCloseSharp
 						onClick={openMobileNav}
-						className="nav-close-btn"
+						className="nav-close-btn slide-in-right-nav"
 					/>
 				) : (
 					<FaBars

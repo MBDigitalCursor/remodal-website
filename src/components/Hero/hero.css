@@ -52,10 +52,40 @@
   }
 }
 
-@media (max-width: 480px) {
+/* mobile responsiveness */
 
+@media(max-width: 480px) {
   .hero {
     padding: var(--mobile-padding);
+    position: relative;
+  }
+
+  .hero-title h1 {
+    width: 100%;
+    position: relative;
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    text-align: left;
+  }
+
+  .hero-title h3 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-btn {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 999px) {
+
+  .hero {
+    padding: var(--tablet-padding);
     position: relative;
 
   }
