@@ -4,6 +4,7 @@
   align-items: center;
   color: var(--primary-text-color);
   padding: 4.3rem 7rem;
+  /* background: conic-gradient(from 350deg at 50% 50%, #1D1C1C -30deg, rgb(12 10 10) 178.12deg, #1D1C1C 330deg, rgb(12 10 10) 538.12deg); */
 }
 
 .nav p {
