@@ -68,7 +68,7 @@
 /* lg-rectangle animation */
 
 .slide-in-top {
-  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes slide-in-top {
@@ -85,21 +85,23 @@
 
 /* md-rectangle animation */
 
+
+
 .scale-in-hor-left {
-  animation: scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-hor-left 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes scale-in-hor-left {
 
   0% {
-    transform: scaleX(0) rotate(90deg);
-    transform-origin: 50% 100%;
+    transform: rotate(90deg) translateX(100vw);
+    transform-origin: 50% 50%;
     opacity: 0;
-    background: rgba(85, 252, 123, 0.71);
+    background: rgba(64, 64, 64, 0.83);
   }
 
   100% {
-    transform: scaleX(1) rotate(90deg);
+    transform: rotate(90deg) translateX(0px);
     transform-origin: 50% 50%;
     opacity: 1;
     background: rgba(64, 64, 64, 0.83);
@@ -109,7 +111,7 @@
 /* sm-rectangle animation */
 
 .slide-in-right {
-  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes slide-in-right {

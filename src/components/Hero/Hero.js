@@ -23,12 +23,12 @@ function Hero() {
 
 	return (
 		<div className="hero container">
-			<div className="hero-title">
-				<h1>
+			<div className="hero-title ">
+				<h1 className="slide-in-left-hero-title">
 					Make your <br /> web home {heroChangingText}
 				</h1>
-				<h3>From idea to responsive product</h3>
-				<button className="hero-btn scale-in-left">Get in touch</button>
+				<h3 className="slide-in-left-hero-title">From idea to responsive product</h3>
+				<button className="hero-btn ">Get in touch</button>
 			</div>
 		</div>
 	);

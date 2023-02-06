@@ -24,7 +24,22 @@
 }
 
 .links-container li:hover {
-  color: #55FC7B
+  color: linear-gradient(to left, red, orange);
+  animation: green-to-white linear infinite;
+}
+
+@keyframes green-to-white {
+  0% {
+    background-position: 0 100%;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
 }
 
 .active-link {

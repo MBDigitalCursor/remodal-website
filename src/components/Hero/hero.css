@@ -36,8 +36,34 @@
 
 /* animations */
 
+
+
+
+
+.slide-in-left-hero-title {
+  animation: slide-in-left-hero-title 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left-hero-title {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+    background-color: #55FC7B;
+  }
+
+  50% {
+    background-color: #55FC7B;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
 .flip-horizontal-top {
-  animation: flip-horizontal-top 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: flip-horizontal-top 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
 @keyframes flip-horizontal-top {
