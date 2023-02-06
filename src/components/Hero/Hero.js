@@ -30,7 +30,7 @@ function Hero() {
 					</h1>
 					<h3>From idea to responsive product</h3>
 				</div>
-				<button className="hero-btn scale-in-left button-2">Get in touch</button>
+				<button className="hero-btn hero-btn-overlay scale-in-left">Get in touch</button>
 			</div>
 		</div>
 	);
