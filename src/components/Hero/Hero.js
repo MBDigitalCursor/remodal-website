@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setHeroChangingText } from "../../store/generalStore";
 import "./hero.css";
@@ -19,7 +19,7 @@ function Hero() {
 		return () => {
 			clearInterval(intervalRef.current);
 		};
-	});
+	}, []);
 
 	return (
 		<div className="hero container">
@@ -30,7 +30,7 @@ function Hero() {
 					</h1>
 					<h3>From idea to responsive product</h3>
 				</div>
-				<button className="hero-btn scale-in-left ">Get in touch</button>
+				<button className="hero-btn scale-in-left">Get in touch</button>
 			</div>
 		</div>
 	);
