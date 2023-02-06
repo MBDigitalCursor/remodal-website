@@ -55,7 +55,6 @@
   }
 }
 
-
 @media(max-width: 480px) {
   .nav {
     padding: var(--mobile-padding);

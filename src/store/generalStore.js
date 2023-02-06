@@ -5,6 +5,7 @@ export const generalSlice = createSlice({
 	initialState: {
 		activeNavLink: false,
 		showMobileNav: false,
+		heroChangingText: "stand out",
 	},
 	reducers: {
 		setActiveNavLink: (state, action) => {
@@ -13,9 +14,12 @@ export const generalSlice = createSlice({
 		setShowMobileNav: (state, action) => {
 			state.showMobileNav = action.payload;
 		},
+		setHeroChangingText: (state, action) => {
+			state.heroChangingText = action.payload;
+		},
 	},
 });
 
-export const { setActiveNavLink, setShowMobileNav } = generalSlice.actions;
+export const { setActiveNavLink, setShowMobileNav, setHeroChangingText } = generalSlice.actions;
 
 export default generalSlice.reducer;
