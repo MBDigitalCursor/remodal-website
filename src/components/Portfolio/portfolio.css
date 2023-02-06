@@ -36,7 +36,8 @@
 .portfolio-cards {
   margin-top: 10rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .single-portfolio-card {
@@ -76,4 +77,8 @@
   font-size: 1rem;
   text-decoration: underline;
   text-underline-offset: 8px;
+}
+
+.swiper-container {
+  display: flex;
 }
