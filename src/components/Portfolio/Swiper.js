@@ -2,18 +2,25 @@ import React, { useEffect } from "react";
 import Swiper from "swiper";
 import { SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import "./portfolio.css";
 
 const SwiperComponent = ({ projects }) => {
 	useEffect(() => {
 		const swiper = new Swiper(".swiper-container", {
-			slidesPerView: 3,
+			slidesPerView: 1,
 			centeredSlides: true,
 			centerInsufficientSlides: true,
-			centerSlidesWithin: window.innerWidth,
+			centerSlidesBounds: true,
 			grabCursor: true,
 			spaceBetween: 100,
-			initialSlide: Math.floor(projects.length / 2),
+			initialSlide: 1,
+			breakpoints: {
+				1023: {
+					slidesPerView: 3,
+				},
+				300: {
+					slidesPerView: 1,
+				},
+			},
 			on: {
 				slideChange: function () {
 					const activeSlide = this.slides[this.activeIndex];
@@ -47,6 +54,7 @@ const SwiperComponent = ({ projects }) => {
 						</SwiperSlide>
 					))}
 				</div>
+				<div className='swiper-pagination'></div>
 			</div>
 		</div>
 	);

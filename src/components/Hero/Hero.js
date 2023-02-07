@@ -1,36 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setHeroChangingText } from "../../store/generalStore";
+import React from "react";
+
+import ChangingWord from "./ChangingWord";
 import "./hero.css";
 
 function Hero() {
-	const dispatch = useDispatch();
-	const { heroChangingText } = useSelector((state) => state.generalSlice);
-	const intervalRef = useRef(null);
-
-	useEffect(() => {
-		const words = ["stand tall", "be more", "perform", "respond"];
-		let i = 0;
-		intervalRef.current = setInterval(() => {
-			dispatch(setHeroChangingText(words[i % words.length]));
-			i++;
-		}, 2000);
-
-		return () => {
-			clearInterval(intervalRef.current);
-		};
-	}, []);
-
 	return (
-		<div className="hero container">
-			<div className="hero-title">
-				<div className="slide-in-left-hero-title">
-					<h1>
-						Make your <br /> web home {heroChangingText}
-					</h1>
+		<div className='hero container'>
+			<div className='hero-title'>
+				<div className='slide-in-left-hero-title'>
+					<ChangingWord></ChangingWord>
 					<h3>From idea to responsive product</h3>
 				</div>
-				<button className="hero-btn hero-btn-overlay scale-in-left">Get in touch</button>
+				<button className='hero-btn hero-btn-overlay scale-in-left'>Get in touch</button>
 			</div>
 		</div>
 	);
