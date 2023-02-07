@@ -1,6 +1,7 @@
 import React from "react";
 import "./portfolio.css";
-import ProjectSlider from "./ProjectSlider";
+
+import SwiperComponent from "./Swiper";
 
 function Portfolio() {
 	const porfolioProjects = [
@@ -29,33 +30,16 @@ function Portfolio() {
 
 	return (
 		<div className='portfolio container'>
-			<div className='portfolio-title'>
-				<h2>Portfolio</h2>
-				<h3>Juggling artistic concepts with product mindset</h3>
+			<div className='portfolio-desc'>
+				<div className='portfolio-title'>
+					<h2>Our works</h2>
+					<h3>Juggling artistic concepts with product mindset</h3>
+				</div>
 				<button className='portfolio-btn'>Get in touch</button>
 			</div>
-			<div className='portfolio-cards'>
-				{/* {porfolioProjects.map((project) => (
-					<div className='single-portfolio-card'>
-						<img
-							src={project.img}
-							alt=''
-						/>
-						<div className='portfolio-info'>
-							<h4>{project.title}</h4>
-							<h5>{project.description}</h5>
-							<a
-								href={project.link}
-								target='_blank'
-								rel='noreferrer'
-							>
-								{project.button}
-							</a>
-						</div>
-					</div>
-				))} */}
-			</div>
-			<ProjectSlider projects={porfolioProjects}></ProjectSlider>
+			{/* <div className='portfolio-cards'> */}
+			<SwiperComponent projects={porfolioProjects}></SwiperComponent>
+			{/* </div> */}
 		</div>
 	);
 }
