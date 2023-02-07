@@ -176,6 +176,27 @@
 }
 
 @media(max-width: 500px) {
+
+  .portfolio-btn {
+    font-size: 1rem;
+  }
+
+  .portfolio {
+    padding: var(--mobile-padding);
+    margin-bottom: 12rem;
+  }
+
+  .portoflio-title {
+    text-align: left;
+  }
+
+  .portfolio-desc {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 15rem;
+  }
+
   .swiper-slide img {
     width: 7rem;
   }
@@ -197,6 +218,21 @@
 }
 
 @media screen and (min-width: 500px) and (max-width: 1115px) {
+
+  .portfolio {
+    padding: var(--tablet-padding);
+  }
+
+  .portfolio-desc {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+
+  .portoflio-title {
+    text-align: left;
+  }
+
   .swiper-slide h4 {
     font-size: 0.5rem;
     letter-spacing: 0.5px;

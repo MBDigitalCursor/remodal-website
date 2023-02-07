@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 import { Contacts } from "@mui/icons-material";
 import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
->>>>>>> 4a84f13cf50576d6f98a534fc79e2ad45a43747c
 import About from "./components/About/About";
 import AboutFingers from "./components/AboutFingers/AboutFingers";
 import Footer from "./components/Footer/Footer";
@@ -52,7 +49,7 @@ function App() {
 	}, []);
 
 	return (
-		<div className='App'>
+		<div className="App">
 			<Nav />
 			<HeroRectangles />
 			<Hero />
