@@ -1,5 +1,5 @@
-import { Contacts } from "@mui/icons-material";
 import About from "./components/About/About";
+import AboutFingers from "./components/AboutFingers/AboutFingers";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import HeroRectangles from "./components/HeroRectangles/HeroRectangles";
@@ -15,6 +15,7 @@ function App() {
 			<Nav />
 			<HeroRectangles />
 			<Hero />
+			<AboutFingers />
 			<About />
 			<Portfolio />
 			<Footer />

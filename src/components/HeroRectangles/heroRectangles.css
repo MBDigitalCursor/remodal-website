@@ -2,8 +2,8 @@
 
 .hero-right-side {
   position: absolute;
-  background: rgba(85, 252, 123, 0.71);
-  box-shadow: 0px 0px 150px 120px rgba(85, 252, 123, 0.74);
+  background: var(--red);
+  box-shadow: 0px 0px 150px 120px var(--red);
   right: 0;
   top: 450px;
   transform: rotate(90deg);
@@ -19,9 +19,9 @@
   height: 530px;
   left: -230px;
   top: -400px;
-  background: rgba(85, 252, 123, 0.71);
+  background: var(--red);
   mix-blend-mode: normal;
-  box-shadow: 0px 0px 150px 120px rgb(85 252 123 / 74%);
+  box-shadow: 0px 0px 150px 120px var(--red);
 }
 
 /* small horizontal rectangle */
@@ -175,8 +175,6 @@
 @media (max-width: 768px) {
   .hero-right-side {
     position: absolute;
-    background: rgba(85, 252, 123, 0.71);
-    box-shadow: 0px 0px 150px 120px rgb(85 252 123 / 74%);
     right: 0;
     top: 360px;
     transform: rotate(90deg) scale(0.7);

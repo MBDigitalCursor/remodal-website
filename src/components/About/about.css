@@ -1,4 +1,77 @@
 .about {
   color: var(--primary-text-color);
-  height: 100vh;
+  text-align: left;
+  padding: 4.3rem 7rem;
+}
+
+.about h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 4.5rem 0;
+}
+
+.about-cards {
+  display: flex;
+  gap: 17%;
+}
+
+.single-about-card img {
+  width: 100%;
+}
+
+.about-socials-icon {
+  font-size: 30px;
+  margin-right: 0.5rem;
+}
+
+.single-about-card {
+  font-weight: 400;
+  max-width: 170px;
+  border-left: 1px solid white;
+  padding-left: 2rem;
+}
+
+.single-about-card h5 {
+  font-size: 9px;
+  margin-bottom: 0.3rem;
+}
+
+.single-about-card h3 {
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.single-about-card p {
+  font-size: 8px;
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}
+
+.tools-icons {
+  color: white;
+  font-size: 50px;
+  margin-right: 4.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.tools-icons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "top top top"
+    "mid mid ."
+    "bot . .";
+}
+
+.top {
+  grid-area: top;
+}
+
+.mid {
+  grid-area: mid;
+}
+
+.bot {
+  grid-area: bot;
 }

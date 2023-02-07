@@ -24,11 +24,11 @@
 }
 
 .links-container li:hover {
-  color: #6cee8a
+  color: var(--red)
 }
 
 .active-link {
-  color: #55FC7B
+  color: var(--red)
 }
 
 .nav-burger,

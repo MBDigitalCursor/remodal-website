@@ -1,6 +1,9 @@
 :root {
   --primary-text-color: #ffffff;
   --primary-bg-color: #1D1C1C;
+  --green: #55fc7bb5;
+  --red: #F42525E5;
+  --yellow: #eca400;
   --tablet-padding: 3rem;
   --mobile-padding: 1rem;
 }

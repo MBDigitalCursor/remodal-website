@@ -34,11 +34,38 @@
   font-size: 1.3rem;
   font-weight: 500;
   padding: 10px 22px;
-  color: var(--primary-text-color);
-  background-color: transparent;
   border: 2.5px solid #FFFFFF;
-  box-shadow: 0px 0px 20px 7px #ffffff26;
   border-radius: 25px;
+  box-shadow: 0px 0px 20px 7px #ffffff26;
+  color: var(--primary-text-color);
+  background-color: var(--primary-text-color);
+  background-image: linear-gradient(270deg, var(--primary-bg-color) 50%, transparent 50%);
+  background-size: 500px;
+  background-position: 99%;
+  transition: background 300ms ease-in-out;
+}
+
+.port-btn-overlay:hover {
+  background-position: 0%;
+  color: var(--primary-bg-color);
+}
+
+.scale-in-left-port-btn {
+  animation: scale-in-left-port-btn 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+}
+
+@keyframes scale-in-left-port-btn {
+  0% {
+    transform: scale(0);
+    transform-origin: 0% 50%;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    transform-origin: 0% 50%;
+    opacity: 1;
+  }
 }
 
 .portfolio-cards {

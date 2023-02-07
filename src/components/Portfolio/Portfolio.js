@@ -29,13 +29,13 @@ function Portfolio() {
 	];
 
 	return (
-		<div className='portfolio container'>
-			<div className='portfolio-desc'>
-				<div className='portfolio-title'>
+		<div className="portfolio container">
+			<div className="portfolio-desc">
+				<div className="portfolio-title">
 					<h2>Our works</h2>
 					<h3>Juggling artistic concepts with product mindset</h3>
 				</div>
-				<button className='portfolio-btn'>Get in touch</button>
+				<button className="portfolio-btn port-btn-overlay scale-in-left-port-btn">Get in touch</button>
 			</div>
 			<SwiperComponent projects={porfolioProjects}></SwiperComponent>
 		</div>
