@@ -5,7 +5,10 @@ export const generalSlice = createSlice({
 	initialState: {
 		activeNavLink: false,
 		showMobileNav: false,
-		heroChangingText: "stand out",
+		heroChangingText: {
+			word: "respond",
+			animation: "bounce-in-right",
+		},
 	},
 	reducers: {
 		setActiveNavLink: (state, action) => {
