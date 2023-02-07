@@ -8,6 +8,7 @@ import Hero from "./components/Hero/Hero";
 import HeroRectangles from "./components/HeroRectangles/HeroRectangles";
 import Nav from "./components/Nav/Nav";
 import Portfolio from "./components/Portfolio/Portfolio";
+import Services from "./components/Services/Services";
 import { setHeroChangingText } from "./store/generalStore";
 import "./styles/App.css";
 import "./styles/reset.css";
@@ -55,6 +56,7 @@ function App() {
 			<Hero />
 			<AboutFingers />
 			<About />
+			<Services />
 			<Portfolio />
 			<Footer />
 		</div>

@@ -56,7 +56,7 @@ function Footer() {
 						<input type="text" />
 					</form>
 				</div>
-				<button className="send-form-button">Send</button>
+				<button className="send-form-button send-form-btn-overlay send-form-left-port-btn">Send</button>
 			</div>
 			<div className="footer-hr">
 				<p>
