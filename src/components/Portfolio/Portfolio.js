@@ -37,9 +37,7 @@ function Portfolio() {
 				</div>
 				<button className='portfolio-btn'>Get in touch</button>
 			</div>
-			{/* <div className='portfolio-cards'> */}
 			<SwiperComponent projects={porfolioProjects}></SwiperComponent>
-			{/* </div> */}
 		</div>
 	);
 }
