@@ -1,5 +1,5 @@
 .footer {
-  padding: 4.3rem 7rem;
+  padding: 4.3rem 7rem 2rem 7rem;
   color: var(--primary-text-color);
 }
 
@@ -7,10 +7,16 @@
   text-align: left;
   display: flex;
   position: relative;
+  margin-bottom: 10rem;
 }
 
 .footer-location img {
   min-width: 320px;
+}
+
+.footer-location p {
+  font-size: 14px;
+  margin-left: 2%;
 }
 
 .footer-contacts {
@@ -22,6 +28,7 @@
   font-size: 2.7rem;
   font-weight: 400;
   margin-bottom: 2.5rem;
+  margin-left: 2%;
 }
 
 .email-phone {
@@ -30,7 +37,6 @@
   border: 1px solid #FFFFFF;
   border-radius: 15px;
   margin-bottom: 2.5rem;
-
 }
 
 .email-phone>div {
@@ -65,10 +71,14 @@
 
 .footer-form {
   position: absolute;
-  top: 8rem;
+  top: 6.5rem;
   right: 0;
   width: 55%;
   flex-grow: 1;
+}
+
+.footer-form label {
+  font-size: 20px;
 }
 
 .footer-form form {
@@ -79,19 +89,30 @@
 
 
 .footer-form input {
+  height: 2.5rem;
   min-width: 100%;
+  background-color: rgba(217, 217, 217, 0.11);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #D9D9D9;
 }
 
-/* footer form buttons fill/call */
+/* send form button */
 
-.form-buttons {
-  margin-bottom: 2rem;
-  flex-grow: 1;
-}
-
-.form-buttons button {
-  padding: 0.9rem;
-  width: 50%;
+.send-form-button {
+  position: absolute;
+  right: 0;
+  bottom: -5rem;
+  padding: 0.35rem 2.5rem;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  background: #F42525;
+  color: white;
+  border-radius: 25px;
+  border: none;
 }
 
 /* white horizontal line and everything below */
@@ -113,7 +134,12 @@
   font-size: 3rem;
 }
 
-/* switch button */
+
+/* switch button footer form buttons fill/call  */
+
+.form-buttons {
+  margin-bottom: 0.5rem;
+}
 
 .btn-color-mode-switch>label.btn-color-mode-switch-inner {
   background-color: #313131;
@@ -130,25 +156,24 @@
   content: attr(data-on);
   position: absolute;
   font-size: 1.25;
-  font-weight: 500;
   top: 12px;
-  right: 75px;
+  right: 90px;
 }
 
 .btn-color-mode-switch>label.btn-color-mode-switch-inner:after {
   content: attr(data-off);
+  font-size: 20px;
   width: 50%;
-  height: 76%;
   position: absolute;
-  border-radius: 15px;
-  left: 2px;
+  border-radius: 10px;
+  left: -12px;
   top: 2px;
   text-align: center;
   transition: all 0.3s ease;
   background: #D9D9D9;
   color: #1D1C1C;
   box-shadow: 0px 0px 6px -2px #111;
-  padding: 5px 0px;
+  padding: 8px 0px;
 }
 
 .btn-color-mode-switch input[type="checkbox"] {
@@ -180,33 +205,248 @@
 }
 
 
-.btn-color-mode-switch input[type="checkbox"]:checked~.alert {
-  display: block;
+.text-flicker-in-glow {
+  animation: text-flicker-in-glow 4s linear both;
 }
 
-/*mode preview*/
-.dark-preview {
-  background: #0d0d0d;
+@keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  10.1% {
+    opacity: 1;
+  }
+
+  10.2% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  20.1% {
+    opacity: 1;
+  }
+
+  20.6% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  30.1% {
+    opacity: 1;
+  }
+
+  30.5% {
+    opacity: 1;
+  }
+
+  30.6% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 0;
+  }
+
+  45.1% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  55.1% {
+    opacity: 0;
+  }
+
+  57% {
+    opacity: 0;
+  }
+
+  57.1% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  60.1% {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 0;
+  }
+
+  65.1% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  75.1% {
+    opacity: 0;
+  }
+
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  77.1% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  85.1% {
+    opacity: 0;
+  }
+
+  86% {
+    opacity: 0;
+  }
+
+  86.1% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-.dark-preview div.btn-container i.fa-sun-o {
-  color: #777;
+@media(max-width: 700px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: var(--mobile-padding);
+  }
+
+  .footer-contacts h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-container {
+    display: block;
+    padding-bottom: 22rem;
+  }
+
+  .email-phone {
+    max-width: 100%;
+  }
+
+  .send-form-button {
+    right: 0;
+    bottom: -9.5rem;
+  }
+
+  .footer-form {
+    top: 14.5rem;
+    right: 0;
+    width: 100%;
+  }
+
+  .footer-location {
+    display: none;
+  }
+
+  .btn-color-mode-switch>label.btn-color-mode-switch-inner {
+    height: 40px;
+  }
+
+  .btn-color-mode-switch>label.btn-color-mode-switch-inner:before,
+  .btn-color-mode-switch>label.btn-color-mode-switch-inner:after {
+    right: 18px;
+    font-size: 90%;
+  }
+
+  .btn-color-mode-switch>label.btn-color-mode-switch-inner:before {
+    top: 8px
+  }
+
+  .btn-color-mode-switch>label.btn-color-mode-switch-inner:after {
+    padding: 6px 0;
+  }
+
+  .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:before {
+    content: attr(data-off);
+    left: 30px;
+  }
+
+  .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner {
+    height: 40px;
+  }
+
 }
 
-.dark-preview div.btn-container i.fa-moon-o {
-  color: #fff;
-  text-shadow: 0px 0px 11px #fff;
-}
+@media screen and (min-width: 700px) and (max-width: 1115px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: var(--tablet-padding);
+  }
 
-.white-preview {
-  background: #fff;
-}
+  .footer-contacts h2 {
+    margin-bottom: 1.5rem;
+  }
 
-.white-preview div.btn-container i.fa-sun-o {
-  color: #ffa500;
-  text-shadow: 0px 0px 16px #ffa500;
-}
+  .contact-container {
+    display: block;
+    padding-bottom: 22rem;
+  }
 
-.white-preview div.btn-container i.fa-moon-o {
-  color: #777;
+  .send-form-button {
+    bottom: -9.5rem;
+  }
+
+  .footer-form {
+    top: 14.5rem;
+    right: 0;
+    width: 100%;
+  }
+
+  .footer-location {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 5rem;
+    right: -5rem;
+  }
+
+  .footer-location p {
+    margin: 0;
+  }
+
+  .footer-location img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+  }
+
+  .email-phone {
+    width: 60%;
+  }
+
 }

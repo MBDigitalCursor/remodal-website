@@ -9,7 +9,7 @@ function Footer() {
 		<div className="footer container">
 			<div className="contact-container">
 				<div className="footer-contacts">
-					<h2>Contact us</h2>
+					<h2 className="text-flicker-in-glow">Contact us</h2>
 					<div className="email-phone">
 						<div>
 							<GoMail className="footer-icon" />
@@ -45,11 +45,7 @@ function Footer() {
 							></label>
 						</label>
 					</div>
-					{/* <div className="form-buttons">
-						<button className="fill-form-btn fill-form-btn-show">Fill in a form</button>
-						<button className="call-form-btn fill-form-btn-hide">Schedule a call</button>
-					</div> */}
-					<form action="">
+					<form>
 						<label htmlFor="name">First name</label>
 						<input type="text" />
 						<label htmlFor="name">E-mail address</label>
@@ -60,6 +56,7 @@ function Footer() {
 						<input type="text" />
 					</form>
 				</div>
+				<button className="send-form-button">Send</button>
 			</div>
 			<div className="footer-hr">
 				<p>
