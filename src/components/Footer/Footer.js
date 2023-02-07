@@ -29,10 +29,26 @@ function Footer() {
 					</div>
 				</div>
 				<div className="footer-form">
-					<div className="form-buttons">
-						<button>Fill in a form</button>
-						<button>Schedule a call</button>
+					<div class="form-buttons">
+						<label class="switch btn-color-mode-switch">
+							<input
+								type="checkbox"
+								name="color_mode"
+								id="color_mode"
+								value="1"
+							/>
+							<label
+								for="color_mode"
+								data-on="Schedule a call"
+								data-off="Fill in form"
+								class="btn-color-mode-switch-inner"
+							></label>
+						</label>
 					</div>
+					{/* <div className="form-buttons">
+						<button className="fill-form-btn fill-form-btn-show">Fill in a form</button>
+						<button className="call-form-btn fill-form-btn-hide">Schedule a call</button>
+					</div> */}
 					<form action="">
 						<label htmlFor="name">First name</label>
 						<input type="text" />
