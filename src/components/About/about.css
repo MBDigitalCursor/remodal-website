@@ -18,12 +18,13 @@
 
 .about-cards {
   display: flex;
-  gap: 17%;
+  gap: 10rem;
   margin-bottom: 16rem;
 }
 
 .single-about-card img {
   width: 100%;
+  max-width: 190px;
 }
 
 .about-socials-icon {
@@ -32,10 +33,13 @@
 }
 
 .single-about-card {
+  max-width: 220px;
   font-weight: 400;
-  max-width: 170px;
   border-left: 1px solid white;
   padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .single-about-card h5 {
