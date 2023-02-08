@@ -34,6 +34,8 @@ function Footer() {
 
 		console.log("dataToSend ===", dataToSend);
 
+		axios.post("https://formspree.io/f/xyyovoyq", dataToSend).then((res) => console.log(res));
+
 		nameRef.current.value = "";
 		emailRef.current.value = "";
 		phoneRef.current.value = "";
