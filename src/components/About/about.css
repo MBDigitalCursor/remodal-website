@@ -1,7 +1,7 @@
 .about {
   color: var(--primary-text-color);
   text-align: left;
-  padding: 4.3rem 7rem;
+  padding: 4.3rem 0rem;
   position: relative;
   z-index: 0;
 }
@@ -11,15 +11,15 @@
 }
 
 .about h2 {
-  font-size: 1.4rem;
+  font-size: var(--font-lg);
   font-weight: 400;
-  padding-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .about-cards {
   display: flex;
   gap: 17%;
-  padding-bottom: 4.5rem;
+  margin-bottom: 16rem;
 }
 
 .single-about-card img {
@@ -39,19 +39,23 @@
 }
 
 .single-about-card h5 {
-  font-size: 9px;
+  font-size: var(--font-sm);
+  font-weight: 300;
   margin-bottom: 0.3rem;
 }
 
+
 .single-about-card h3 {
-  font-size: 14px;
+  font-size: var(--font-md);
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .single-about-card p {
-  font-size: 8px;
+  font-size: var(--font-sm);
   margin-bottom: 0.5rem;
   word-break: break-all;
+  font-weight: 400;
 }
 
 .tools-icons {
@@ -62,13 +66,10 @@
 }
 
 .tools-icons-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    "top top top"
-    "mid mid ."
-    "bot . .";
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+  margin-bottom: 25rem;
 }
 
 .top {

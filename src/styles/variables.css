@@ -6,4 +6,17 @@
   --yellow: #eca400;
   --tablet-padding: 3rem;
   --mobile-padding: 1rem;
+
+  /* font-sizes */
+
+  /* paragraph */
+  --font-sm: 16px;
+  /* nav, buttons */
+  --font-md: 21px;
+  /* section names */
+  --font-lg: 28px;
+  /* text headers */
+  --font-xl: 37px;
+  /* hero */
+  --hero-h1: 4.9rem;
 }

@@ -4,7 +4,7 @@ import "./about.css";
 import ArturasImg from "../../assets/img/Artur.png";
 import TonyImg from "../../assets/img/Anton.png";
 import IgnasImg from "../../assets/img/Ignas.png";
-import { SiJavascript, SiReact, SiRedux, SiNodedotjs, SiExpress } from "react-icons/si";
+import { SiJavascript, SiReact, SiRedux, SiNodedotjs, SiExpress, SiHtml5, SiCss3, SiFigma, SiAdobeillustrator, SiTailwindcss, SiMaterialui } from "react-icons/si";
 import { FaSass } from "react-icons/fa";
 
 function About() {
@@ -67,20 +67,20 @@ function About() {
 					<FaSass />
 				</div>
 			</div>
-			<h2>Development tools and technologies</h2>
+			<h2 className="tools-h2">Development tools and technologies</h2>
 			<div className="tools-icons-container">
-				<div className="top">
-					<SiJavascript className="tools-icons" />
-					<SiReact className="tools-icons" />
-					<SiRedux className="tools-icons" />
-				</div>
-				<div className="mid">
-					<SiNodedotjs className="tools-icons" />
-					<SiExpress className="tools-icons" />
-				</div>
-				<div className="bot">
-					<FaSass className="tools-icons" />
-				</div>
+				<SiHtml5 />
+				<SiJavascript />
+				<SiReact />
+				<SiRedux />
+				<SiNodedotjs />
+				<SiExpress />
+				<SiCss3 />
+				<FaSass />
+				<SiTailwindcss />
+				<SiMaterialui />
+				<SiFigma />
+				<SiAdobeillustrator />
 			</div>
 		</div>
 	);

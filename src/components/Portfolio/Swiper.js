@@ -11,7 +11,7 @@ const SwiperComponent = ({ projects }) => {
 			centerInsufficientSlides: true,
 			centerSlidesBounds: true,
 			grabCursor: true,
-			spaceBetween: 100,
+			spaceBetween: 200,
 			initialSlide: 1,
 			breakpoints: {
 				1023: {
@@ -36,25 +36,27 @@ const SwiperComponent = ({ projects }) => {
 	}, []);
 
 	return (
-		<div className='swiper-component'>
-			<div className='swiper-container'>
-				<div className='swiper-wrapper'>
+		<div className="swiper-component">
+			<div className="swiper-container">
+				<div className="swiper-wrapper">
 					{projects.map((project, i) => (
 						<SwiperSlide
 							key={i}
-							className='swiper-slide custom-slide'
+							className="swiper-slide custom-slide"
 						>
 							<img
 								src={project.img}
-								alt=''
+								alt=""
 							/>
-							<h4>{project.title}</h4>
-							<p>{project.description}</p>
-							<a href={project.link}>{project.button}</a>
+							<div className="center-slide-focused">
+								<h4>{project.title}</h4>
+								<p>{project.description}</p>
+								<a href={project.link}>{project.button}</a>
+							</div>
 						</SwiperSlide>
 					))}
 				</div>
-				<div className='swiper-pagination'></div>
+				<div className="swiper-pagination"></div>
 			</div>
 		</div>
 	);

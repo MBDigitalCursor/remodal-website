@@ -1,5 +1,5 @@
 .services {
-  padding: 5rem 7rem;
+  padding: 4.3rem 0rem;
   padding-bottom: 10rem;
   color: var(--primary-text-color);
   display: flex;
@@ -10,35 +10,36 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 25rem;
 }
 
 .services-desc h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
+  font-size: var(--font-xl);
+  margin-bottom: 1.1rem;
 }
 
 .services-desc h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  font-size: var(--font-md);
+  margin-bottom: 1.1rem;
 }
 
 .services-desc p {
   width: 55%;
   margin-bottom: 2.5rem;
-  font-size: 0.9rem;
+  line-height: 1.6;
+  font-size: var(--font-sm);
   font-weight: 300;
 }
 
 .services-desc button {
   width: 30%;
-  margin-left: 10%;
 }
 
 .services-btn {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 500;
-  padding: 10px 22px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 10px 16px;
   border-radius: 25px;
   border: none;
   box-shadow: 0px 0px 20px 7px var(--red);

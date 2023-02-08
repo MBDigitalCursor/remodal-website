@@ -15,7 +15,7 @@ function Portfolio() {
 		{
 			img: "https://images.unsplash.com/photo-1529792083865-d23889753466?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
 			title: "Statybior website",
-			description: "Never ending projects, leaking pipes, thin walls",
+			description: "Never ending projects, leaking pipes, thin walls, Never ending projects, leaking pipes, thin walls, Never ending project",
 			button: "Visit website",
 			link: "http://www.google.com",
 		},

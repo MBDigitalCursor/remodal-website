@@ -43,84 +43,84 @@ function Footer() {
 	};
 
 	return (
-		<div className='footer container'>
-			<div className='contact-container'>
-				<div className='footer-contacts'>
-					<h2 className='text-flicker-in-glow'>Contact us</h2>
-					<div className='email-phone'>
+		<div className="footer container">
+			<div className="contact-container">
+				<div className="footer-contacts">
+					<h2 className="text-flicker-in-glow">Contact us</h2>
+					<div className="email-phone">
 						<div>
-							<GoMail className='footer-icon' />
-							<a href='/'>contact@remodal.lt</a>
+							<GoMail className="footer-icon" />
+							<a href="/">contact@remodal.lt</a>
 						</div>
 						<div>
-							<BsFillTelephoneFill className='footer-icon' />
-							<a href='/'>+370 620 69 420</a>
+							<BsFillTelephoneFill className="footer-icon" />
+							<a href="/">+370 620 69 420</a>
 						</div>
 					</div>
-					<div className='footer-location'>
+					<div className="footer-location">
 						<img
 							src={require("../../assets/img/map.png")}
-							alt=''
+							alt=""
 						/>
 						<p>Vilnius, Lithuania</p>
 					</div>
 				</div>
-				<div className='footer-form'>
-					<div className='form-buttons'>
-						<label className='switch btn-color-mode-switch'>
+				<div className="footer-form">
+					<div className="form-buttons">
+						<label className="switch btn-color-mode-switch">
 							<input
-								type='checkbox'
-								name='color_mode'
-								id='color_mode'
-								value='1'
+								type="checkbox"
+								name="color_mode"
+								id="color_mode"
+								value="1"
 							/>
 							<label
-								htmlFor='color_mode'
-								data-on='Schedule a call'
-								data-off='Fill in form'
-								className='btn-color-mode-switch-inner'
+								htmlFor="color_mode"
+								data-on="Schedule a call"
+								data-off="Fill in form"
+								className="btn-color-mode-switch-inner"
 							></label>
 						</label>
 					</div>
 					<form onSubmit={(e) => handleSubmit(e)}>
-						<label htmlFor='First name'>First name</label>
+						<label htmlFor="First name">First name</label>
 						<input
 							ref={nameRef}
-							type='text'
-							name='First name'
+							type="text"
+							name="First name"
 						/>
-						<label htmlFor='Email'>E-mail address</label>
+						<label htmlFor="Email">E-mail address</label>
 						<input
 							ref={emailRef}
-							type='text'
-							name='Email'
+							type="text"
+							name="Email"
 						/>
-						<label htmlFor='Phone number'>Phone number</label>
+						<label htmlFor="Phone number">Phone number</label>
 						<input
 							ref={phoneRef}
-							type='text'
-							name='Phone number'
+							type="text"
+							name="Phone number"
 						/>
-						<label htmlFor='Description'>Brief description</label>
+						<label htmlFor="Description">Brief description</label>
 						<input
 							ref={descRef}
-							type='text'
-							name='Description'
+							type="text"
+							name="Description"
 						/>
 					</form>
 				</div>
 				<button
-					className='send-form-button send-form-btn-overlay send-form-left-port-btn'
+					className="send-form-button send-form-btn-overlay send-form-left-port-btn"
 					onClick={handleSubmit}
 				>
 					Send
 				</button>
 			</div>
-			<div className='footer-hr'>
+			<div className="footer-hr">
 				<p>
 					Responsive web development for businesses and personalities <br /> Individual design approach made simple
 				</p>
-				<a href='/'>
+				<a href="/">
 					<GoMarkGithub />
 				</a>
 			</div>
