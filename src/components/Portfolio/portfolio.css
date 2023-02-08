@@ -133,18 +133,6 @@
   letter-spacing: 1.5px;
 }
 
-/* chatGPT version */
-
-/* .swiper-container {
-  margin: 0 auto;
-} */
-
-/* .swiper-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 170px;
-} */
-
 .swiper-component .center-slide {
   object-fit: cover;
   transform: scale(3.6) !important;
@@ -160,15 +148,12 @@
   border-radius: 5px;
 }
 
-/* .swiper-component {
-  width: 100%;
-  max-width: 100%;
-} */
-
 .swiper-container {
   width: 90%;
   margin: 0 auto;
 }
+
+/* media breakpoints */
 
 @media(max-width: 380px) {
   .swiper-slide img {

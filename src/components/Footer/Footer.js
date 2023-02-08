@@ -108,7 +108,7 @@ function Footer() {
 					</form>
 				</div>
 				<button
-					className='send-form-button'
+					className='send-form-button send-form-btn-overlay send-form-left-port-btn'
 					onClick={handleSubmit}
 				>
 					Send

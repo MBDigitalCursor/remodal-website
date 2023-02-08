@@ -105,15 +105,42 @@
   right: 0;
   bottom: -5rem;
   padding: 0.35rem 2.5rem;
-  font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
-  background: var(--red);
-  color: var(--primary-text-color);
   border-radius: 25px;
   border: none;
+  color: var(--primary-text-color);
+  background-color: var(--yellow);
+  background-image: linear-gradient(270deg, var(--red) 50%, transparent 50%);
+  background-size: 300px;
+  background-position: 100%;
+  transition: background 300ms ease-in-out;
 }
+
+.send-form-btn-overlay:hover {
+  background-position: 0%;
+  color: var(--primary-bg-color);
+}
+
+.send-form-left-port-btn {
+  animation: send-form-left-services-btn 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+}
+
+@keyframes send-form-left-services-btn {
+  0% {
+    transform: scale(0);
+    transform-origin: 0% 50%;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+
 
 /* white horizontal line and everything below */
 
@@ -138,7 +165,12 @@
 /* switch button footer form buttons fill/call  */
 
 .form-buttons {
+
   margin-bottom: 0.5rem;
+}
+
+.form-buttons *:hover {
+  cursor: pointer;
 }
 
 .btn-color-mode-switch>label.btn-color-mode-switch-inner {
