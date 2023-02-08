@@ -171,6 +171,21 @@
   border-radius: 10px;
 }
 
+@media (max-width: 480px) {
+
+  .hero-title {
+    padding-top: 6rem;
+    margin-bottom: 20rem;
+  }
+
+  .md-rectangle {
+    right: -130px;
+  }
+
+  .sm-rectangle {
+    right: -100px;
+  }
+}
 
 @media (max-width: 768px) {
   .hero-right-side {

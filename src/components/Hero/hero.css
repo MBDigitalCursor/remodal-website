@@ -178,6 +178,10 @@
     position: relative;
   }
 
+  .hero-title {
+    margin-bottom: 10rem;
+  }
+
   .hero-title h1 {
     width: 100%;
     position: relative;
@@ -200,12 +204,11 @@
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 999px) {
+@media screen and (min-width: 500px) and (max-width: 1115px) {
 
   .hero {
     padding: var(--tablet-padding);
-    position: relative;
-
+    padding-bottom: 15rem;
   }
 
   .hero-title h1 {
@@ -222,5 +225,11 @@
     font-weight: 400;
     font-size: 1rem;
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1116px) and (max-width: 1440px) {
+  .hero {
+    padding: var(--tablet-padding);
   }
 }

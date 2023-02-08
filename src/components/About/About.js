@@ -49,23 +49,17 @@ function About() {
 							src={member.img}
 							alt="team member"
 						/>
-						<h5>{member.role}</h5>
-						<h3>{member.name}</h3>
-						<p>{member.about}</p>
-						<div className="about-socials">
-							<BsLinkedin className="about-socials-icon" />
-							<BsGithub className="about-socials-icon" />
+						<div className="single-card-desc">
+							<h5>{member.role}</h5>
+							<h3>{member.name}</h3>
+							<p>{member.about}</p>
+							<div className="about-socials">
+								<BsLinkedin className="about-socials-icon" />
+								<BsGithub className="about-socials-icon" />
+							</div>
 						</div>
 					</div>
 				))}
-				<div className="mobile-tools-icons">
-					<SiJavascript />
-					<SiReact />
-					<SiRedux />
-					<SiNodedotjs />
-					<SiExpress />
-					<FaSass />
-				</div>
 			</div>
 			<h2 className="tools-h2">Development tools and technologies</h2>
 			<div className="tools-icons-container">

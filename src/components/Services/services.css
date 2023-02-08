@@ -6,6 +6,7 @@
 }
 
 .services-desc {
+  width: 100%;
   text-align: left;
   position: relative;
   display: flex;
@@ -193,6 +194,7 @@
   }
 }
 
+
 @media(max-width: 699px) {
   .services {
     padding: var(--mobile-padding);
@@ -203,7 +205,7 @@
   }
 
   .services-desc button {
-    width: 85%;
+    width: 50%;
     margin-left: 0;
     margin-bottom: 5rem;
   }
@@ -224,6 +226,35 @@
   }
 }
 
+@media (max-width: 480px) {
+
+  .services-desc {
+    margin-bottom: 10rem
+  }
+
+  .services-desc h2,
+  .about h2 {
+    font-size: 1.6rem;
+  }
+
+  .services-desc h3 {
+    font-size: 1rem;
+  }
+
+  .services-desc p {
+    font-size: 0.8rem;
+  }
+
+  .services-btn {
+    display: none;
+  }
+
+  .services-screens .phone {
+    display: block;
+    left: -7rem;
+  }
+}
+
 @media screen and (min-width: 700px) and (max-width: 1115px) {
   .services {
     padding: var(--tablet-padding)
@@ -233,17 +264,17 @@
     width: 100%;
   }
 
-  .services-btn {
-    position: absolute;
-    bottom: -3rem;
-    right: 0;
-  }
-
   .services-desc button {
-    width: 55%;
+    width: 32%;
   }
 
   .phone {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1116px) and (max-width: 1440px) {
+  .services {
+    padding: var(--tablet-padding);
   }
 }

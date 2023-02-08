@@ -96,79 +96,83 @@
   display: none;
 }
 
+@media(max-width: 480px) {
+
+  .about-cards {
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+
+  .single-about-card {
+    max-width: 100%;
+    gap: 0;
+    margin-bottom: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+
+  .single-about-card .single-card-desc {
+    margin-left: 2rem;
+  }
+
+  .single-about-card p {
+    display: none;
+  }
+
+  .single-about-card img {
+    max-width: 120px;
+  }
+
+  .tools-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 10rem;
+  }
+}
+
 @media(max-width: 699px) {
   .about {
     padding: var(--mobile-padding);
   }
 
-  .about h2 {
-    display: none;
-  }
-
-  .mobile-h3 {
-    display: block;
-    margin-bottom: 1rem;
-  }
-
   .about-cards {
     display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 0;
+    gap: 0;
+  }
+
+  .about-cards div {
+    border: none;
+    display: flex;
+  }
+
+  .single-card-desc {
+    display: flex;
+    flex-direction: column;
   }
 
   .single-about-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 0rem;
-    max-width: 40%;
-    border-bottom: 1px solid white;
-    border-left: none;
-    margin-bottom: 4rem;
+    width: 100%;
   }
-
 
   .single-about-card img {
     width: 50%;
   }
 
-  .mobile-tools-icons {
-    max-width: 40%;
-    border-bottom: 1px solid white;
-  }
-
   .tools-icons-container {
-    display: none;
-  }
-
-  .mobile-tools-icons {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 4rem;
-    gap: 1rem;
+    gap: 2rem;
   }
 
-  .mobile-tools-icons * {
-    padding-left: 0rem;
-    border-left: none;
-    font-size: 3.5rem;
-  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1115px) {
 
   .about {
     padding: var(--tablet-padding);
-  }
-
-  .mobile-h3 {
-    display: none;
-  }
-
-  .mobile-tools-icons {
-    display: none;
   }
 
   .about-cards {
@@ -190,11 +194,15 @@
 
   .tools-icons-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
   }
 
-  .tools-icons {
-    margin: 0 auto;
+}
+
+@media screen and (min-width: 1116px) and (max-width: 1440px) {
+  .about {
+    padding: var(--tablet-padding);
   }
 }

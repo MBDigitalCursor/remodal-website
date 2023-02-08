@@ -16,7 +16,9 @@ function Services() {
 			<div className="services-desc">
 				<h2>Responsive website development</h2>
 				<h3>Custom website design & individual graphic design</h3>
-				<p>We are here to craft you unique corporate, e-commerce or personal digital home to stand out from the pack and tell the story with on-going support. Enhance your online presence</p>
+				<p>
+					We are here to craft you unique corporate, e-commerce or personal digital <br /> home to stand out from the pack and tell the story with on-going support. <br /> Enhance your online presence
+				</p>
 				<button className="services-btn services-in-left-port-btn services-btn-overlay">Let’s build your website</button>
 			</div>
 			<div className="services-screens">
