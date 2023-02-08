@@ -6,7 +6,6 @@ import TonyImg from "../../assets/img/Anton.png";
 import IgnasImg from "../../assets/img/Ignas.png";
 import { SiJavascript, SiReact, SiRedux, SiNodedotjs, SiExpress } from "react-icons/si";
 import { FaSass } from "react-icons/fa";
-import AboutFingers from "../AboutFingers/AboutFingers";
 
 function About() {
 	const teamMembers = [
@@ -38,6 +37,7 @@ function About() {
 
 	return (
 		<div className="about container">
+			<h3 className="mobile-h3">Our band and tools</h3>
 			<h2>Our band</h2>
 			<div className="about-cards">
 				{teamMembers.map((member, i) => (
@@ -58,6 +58,14 @@ function About() {
 						</div>
 					</div>
 				))}
+				<div className="mobile-tools-icons">
+					<SiJavascript />
+					<SiReact />
+					<SiRedux />
+					<SiNodedotjs />
+					<SiExpress />
+					<FaSass />
+				</div>
 			</div>
 			<h2>Development tools and technologies</h2>
 			<div className="tools-icons-container">
