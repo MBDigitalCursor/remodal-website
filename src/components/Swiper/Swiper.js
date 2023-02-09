@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+import { Pagination } from "swiper";
 
 const SwiperComponent = () => {
 	const projects = [
