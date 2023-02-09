@@ -1,11 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./footer.css";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 import { GoMarkGithub } from "react-icons/go";
 import axios from "axios";
+import { setFormDescErrorMsg, setFormEmailErrorMsg, setFormNameErrorMsg, setFormNumberErrorMsg, setShowSendButton } from "../../store/generalStore";
+import { useDispatch, useSelector } from "react-redux";
 
 function Footer() {
+	const { showSendButton, formDescErrorMsg, formNumberErrorMsg, formEmailErrorMsg, formNameErrorMsg } = useSelector((state) => state.generalSlice);
+	const dispatch = useDispatch();
 	const nameRef = useRef();
 	const emailRef = useRef();
 	const phoneRef = useRef();
@@ -27,19 +31,33 @@ function Footer() {
 		const isValidNumber = phonePattern.test(dataToSend.phoneNumber);
 		const isValidName = firstNamePattern.test(dataToSend.firstName);
 
-		if (!isValidEmail) return console.log("Email bad");
-		if (!isValidNumber) return console.log("Number bad");
-		if (!isValidName) return console.log("Name bad");
-		if (dataToSend.description.length > 200) return console.log("Too much symbols");
+		if (!isValidEmail) return dispatch(setFormEmailErrorMsg("Enter a valid email address."));
+		if (!isValidNumber) return dispatch(setFormNumberErrorMsg("Enter a valid phone number."));
+		if (!isValidName) return dispatch(setFormNameErrorMsg("Enter a valid name."));
+		if (dataToSend.description.length > 200 || dataToSend.description.length < 3) return dispatch(setFormDescErrorMsg("Message length incorrect."));
 
-		console.log("dataToSend ===", dataToSend);
-
-		axios.post("https://formspree.io/f/xyyovoyq", dataToSend).then((res) => console.log(res));
+		axios.post("https://formspree.io/f/xoqrzvdp", dataToSend).then((res) => {
+			if (res.status === 200) {
+				dispatch(setShowSendButton(false));
+				dispatch(setFormEmailErrorMsg(null));
+				dispatch(setFormNumberErrorMsg(null));
+				dispatch(setFormNameErrorMsg(null));
+				dispatch(setFormDescErrorMsg(null));
+			}
+		});
 
 		nameRef.current.value = "";
 		emailRef.current.value = "";
 		phoneRef.current.value = "";
 		descRef.current.value = "";
+	};
+
+	const handleShowSend = () => {
+		if (nameRef.current.value !== "" && emailRef.current.value !== "" && phoneRef.current.value !== "" && descRef.current.value !== "") {
+			dispatch(setShowSendButton(true));
+		} else {
+			dispatch(setShowSendButton(false));
+		}
 	};
 
 	return (
@@ -83,38 +101,97 @@ function Footer() {
 						</label>
 					</div>
 					<form onSubmit={(e) => handleSubmit(e)}>
-						<label htmlFor="First name">First name</label>
+						{formNameErrorMsg ? (
+							<label
+								className="formError"
+								htmlFor="First name"
+							>
+								{formNameErrorMsg}
+							</label>
+						) : (
+							<label htmlFor="First name">First name</label>
+						)}
 						<input
+							autoComplete="off"
+							onChange={() => {
+								handleShowSend();
+								dispatch(setFormNameErrorMsg(null));
+							}}
 							ref={nameRef}
 							type="text"
 							name="First name"
 						/>
-						<label htmlFor="Email">E-mail address</label>
+						{formEmailErrorMsg ? (
+							<label
+								className="formError"
+								htmlFor="Email"
+							>
+								{formEmailErrorMsg}
+							</label>
+						) : (
+							<label htmlFor="Email">E-mail address</label>
+						)}
 						<input
+							autocomplete="off"
+							onChange={() => {
+								handleShowSend();
+								dispatch(setFormEmailErrorMsg(null));
+							}}
 							ref={emailRef}
 							type="text"
 							name="Email"
 						/>
-						<label htmlFor="Phone number">Phone number</label>
+						{formNumberErrorMsg ? (
+							<label
+								className="formError"
+								htmlFor="Phone number"
+							>
+								{formNumberErrorMsg}
+							</label>
+						) : (
+							<label htmlFor="Phone number">Phone number</label>
+						)}
 						<input
+							autoComplete="off"
+							onChange={() => {
+								handleShowSend();
+								dispatch(setFormNumberErrorMsg(null));
+							}}
 							ref={phoneRef}
 							type="text"
 							name="Phone number"
+							placeholder="+3706*******"
 						/>
-						<label htmlFor="Description">Brief description</label>
+						{formDescErrorMsg ? (
+							<label
+								className="formError"
+								htmlFor="Description"
+							>
+								{formDescErrorMsg}
+							</label>
+						) : (
+							<label htmlFor="Description">Brief description</label>
+						)}
 						<input
+							autoComplete="off"
+							onChange={() => {
+								handleShowSend();
+								dispatch(setFormDescErrorMsg(null));
+							}}
 							ref={descRef}
 							type="text"
 							name="Description"
 						/>
 					</form>
-				</div>
-				<button
-					className="send-form-button send-form-btn-overlay send-form-left-port-btn"
-					onClick={handleSubmit}
-				>
-					Send
-				</button>
+				</div>{" "}
+				{showSendButton && (
+					<button
+						className="send-form-button send-form-btn-overlay send-form-left-port-btn"
+						onClick={handleSubmit}
+					>
+						Send
+					</button>
+				)}
 			</div>
 			<div className="contacts-hr">
 				<p>
