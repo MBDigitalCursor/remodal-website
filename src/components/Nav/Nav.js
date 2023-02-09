@@ -19,11 +19,33 @@ function Nav() {
 
 	const links = ["About", "Services", "Portfolio", "Contacts"];
 
+	// const handleClickScroll = (i) => {
+	// 	const sectionScrollTo = links[i].toLowerCase();
+	// 	const element = document.querySelector(`.${sectionScrollTo}`);
+	// 	if (element) {
+	// 		element.scrollIntoView({ behavior: "smooth" });
+	// 	}
+	// };
+
 	const handleClickScroll = (i) => {
 		const sectionScrollTo = links[i].toLowerCase();
 		const element = document.querySelector(`.${sectionScrollTo}`);
 		if (element) {
-			element.scrollIntoView({ behavior: "smooth" });
+			const startingY = window.pageYOffset;
+			const targetY = element.getBoundingClientRect().top + window.pageYOffset;
+			const diff = targetY - startingY;
+			const easing = (t) => (t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1);
+			let start;
+
+			window.requestAnimationFrame(function step(timestamp) {
+				if (!start) start = timestamp;
+				const time = timestamp - start;
+				const percent = Math.min(time / 1000, 1);
+				window.scrollTo(0, startingY + diff * easing(percent));
+				if (time < 1000) {
+					window.requestAnimationFrame(step);
+				}
+			});
 		}
 	};
 
