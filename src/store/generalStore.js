@@ -6,7 +6,7 @@ export const generalSlice = createSlice({
 		activeNavLink: false,
 		showMobileNav: false,
 		heroChangingText: {
-			word: "respond",
+			word: "stand out",
 			animation: "bounce-in-right",
 		},
 	},

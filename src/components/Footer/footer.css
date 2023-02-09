@@ -1,31 +1,31 @@
-.footer {
+.contacts {
   padding: 4.3rem 0rem 0rem 0rem;
   color: var(--primary-text-color);
 }
 
-.contact-container {
+.contacts-container {
   text-align: left;
   display: flex;
   position: relative;
   margin-bottom: 5rem;
 }
 
-.footer-location img {
+.contacts-location img {
   min-width: 320px;
 }
 
-.footer-location p {
+.contacts-location p {
   font-weight: 300;
   font-size: 14px;
   margin-left: 8%;
 }
 
-.footer-contacts {
+.contacts-contacts {
   flex-basis: 300px;
   margin-top: 31px;
 }
 
-.footer-contacts h2 {
+.contacts-contacts h2 {
   text-align: left;
   font-size: var(--font-xl);
   font-weight: 400;
@@ -61,7 +61,7 @@
   text-align: center;
 }
 
-.footer-icon {
+.contacts-icon {
   font-size: 2.2rem;
   border: 1px solid var(--primary-text-color);
   padding: 0.5rem;
@@ -72,7 +72,7 @@
 /* footer form */
 
 
-.footer-form {
+.contacts-form {
   position: absolute;
   top: 6.5rem;
   right: 0;
@@ -80,18 +80,18 @@
   flex-grow: 1;
 }
 
-.footer-form label {
+.contacts-form label {
   font-size: var(--font-sm);
 }
 
-.footer-form form {
+.contacts-form form {
   background-color: #313131;
   padding: 25px 43px;
   border-radius: 15px;
 }
 
 
-.footer-form input {
+.contacts-form input {
   margin-top: 2px;
   height: 2.5rem;
   min-width: 100%;
@@ -148,7 +148,7 @@
 
 /* white horizontal line and everything below */
 
-.footer-hr {
+.contacts-hr {
   width: 100%;
   margin: 0 auto;
   border-top: 1px solid var(--primary-text-color);
@@ -158,13 +158,13 @@
   padding-top: 1rem;
 }
 
-.footer-hr p {
+.contacts-hr p {
   font-size: 10px;
   text-align: left;
   font-weight: 300;
 }
 
-.footer-hr a {
+.contacts-hr a {
   font-size: 3rem;
 }
 
@@ -376,17 +376,17 @@
 }
 
 @media(max-width: 700px) {
-  .footer {
+  .contacts {
     display: flex;
     flex-direction: column;
     padding: var(--mobile-padding);
   }
 
-  .footer-contacts h2 {
+  .contacts-contacts h2 {
     margin-bottom: 1.5rem;
   }
 
-  .contact-container {
+  .contacts-container {
     display: block;
     padding-bottom: 22rem;
   }
@@ -400,13 +400,13 @@
     bottom: -9.5rem;
   }
 
-  .footer-form {
+  .contacts-form {
     top: 14.5rem;
     right: 0;
     width: 100%;
   }
 
-  .footer-location {
+  .contacts-location {
     display: none;
   }
 
@@ -441,7 +441,7 @@
 
 @media(max-width: 480px) {
 
-  .footer-contacts h2 {
+  .contacts-contacts h2 {
     text-align: center;
     margin-bottom: 1.5rem;
     margin-left: 0;
@@ -452,19 +452,19 @@
     margin: 0;
   }
 
-  .footer-location img,
-  .footer-location p {
+  .contacts-location img,
+  .contacts-location p {
     display: none;
   }
 
-  .footer-hr {
+  .contacts-hr {
     margin-top: 6rem;
   }
 }
 
 @media (min-width: 481px) and (max-width: 699px) {
 
-  .footer-contacts h2 {
+  .contacts-contacts h2 {
     text-align: center;
     margin-bottom: 1.5rem;
     margin-left: 0;
@@ -475,11 +475,11 @@
     margin: 0;
   }
 
-  .footer-hr {
+  .contacts-hr {
     margin-top: 6rem;
   }
 
-  .footer-location {
+  .contacts-location {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -488,12 +488,12 @@
     right: -5rem;
   }
 
-  .footer-location img {
+  .contacts-location img {
     height: 115px;
     object-fit: contain;
   }
 
-  .footer-location p {
+  .contacts-location p {
     font-weight: 300;
     font-size: 14px;
     margin-left: 0%;
@@ -502,19 +502,19 @@
 }
 
 @media screen and (min-width: 700px) and (max-width: 1115px) {
-  .footer {
+  contacts {
     display: flex;
     flex-direction: column;
     padding: var(--tablet-padding);
     padding-bottom: 0.5rem;
   }
 
-  .footer-contacts h2 {
+  .contacts-contacts h2 {
     margin-bottom: 1.5rem;
     margin-left: 2%;
   }
 
-  .contact-container {
+  .contacts-container {
     display: block;
     padding-bottom: 22rem;
   }
@@ -523,13 +523,13 @@
     bottom: -9.5rem;
   }
 
-  .footer-form {
+  .contacts-form {
     top: 14.5rem;
     right: 0;
     width: 100%;
   }
 
-  .footer-location {
+  .contacts-location {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -538,11 +538,11 @@
     right: -5rem;
   }
 
-  .footer-location p {
+  .contacts-location p {
     margin: 0;
   }
 
-  .footer-location img {
+  .contacts-location img {
     width: 110px;
     height: 110px;
     object-fit: contain;
@@ -561,12 +561,12 @@
 
 @media screen and (min-width: 1116px) and (max-width: 1440px) {
 
-  .footer-contacts h2 {
+  .contacts-contacts h2 {
     margin-bottom: 1.5rem;
     margin-left: 9%;
   }
 
-  .footer {
+  .contacts {
     padding: var(--tablet-padding);
   }
 }

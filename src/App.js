@@ -1,6 +1,7 @@
 import { Contacts } from "@mui/icons-material";
+import { sliderClasses } from "@mui/material";
 import { useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import About from "./components/About/About";
 import AboutFingers from "./components/AboutFingers/AboutFingers";
 import Footer from "./components/Footer/Footer";
@@ -47,7 +48,7 @@ function App() {
 		return () => {
 			clearInterval(intervalRef.current);
 		};
-	}, []);
+	});
 
 	return (
 		<div className="App">

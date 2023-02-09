@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setActiveNavLink, setShowMobileNav } from "../../store/generalStore";
+import { setActiveNavLink, setScrollToLink, setShowMobileNav } from "../../store/generalStore";
 import { FaBars } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import "./nav.css";
@@ -19,6 +19,14 @@ function Nav() {
 
 	const links = ["About", "Services", "Portfolio", "Contacts"];
 
+	const handleClickScroll = (i) => {
+		const sectionScrollTo = links[i].toLowerCase();
+		const element = document.querySelector(`.${sectionScrollTo}`);
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+
 	return (
 		<nav>
 			<div className="nav container">
@@ -27,7 +35,10 @@ function Nav() {
 					{links.map((link, i) => (
 						<li
 							key={i}
-							onClick={() => handleLinkColor(i)}
+							onClick={() => {
+								handleLinkColor(i);
+								handleClickScroll(i);
+							}}
 							className={activeNavLink === i ? "active-link" : ""}
 						>
 							{link}

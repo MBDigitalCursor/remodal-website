@@ -43,21 +43,21 @@ function Footer() {
 	};
 
 	return (
-		<div className="footer container">
-			<div className="contact-container">
-				<div className="footer-contacts">
+		<div className="contacts container">
+			<div className="contacts-container">
+				<div className="contacts-contacts">
 					<h2 className="text-flicker-in-glow">Contact us</h2>
 					<div className="email-phone">
 						<div>
-							<GoMail className="footer-icon" />
+							<GoMail className="contacts-icon" />
 							<a href="/">contact@remodal.lt</a>
 						</div>
 						<div>
-							<BsFillTelephoneFill className="footer-icon" />
+							<BsFillTelephoneFill className="contacts-icon" />
 							<a href="/">+370 620 69 420</a>
 						</div>
 					</div>
-					<div className="footer-location">
+					<div className="contacts-location">
 						<img
 							src={require("../../assets/img/map.png")}
 							alt=""
@@ -65,7 +65,7 @@ function Footer() {
 						<p>Vilnius, Lithuania</p>
 					</div>
 				</div>
-				<div className="footer-form">
+				<div className="contacts-form">
 					<div className="form-buttons">
 						<label className="switch btn-color-mode-switch">
 							<input
@@ -116,7 +116,7 @@ function Footer() {
 					Send
 				</button>
 			</div>
-			<div className="footer-hr">
+			<div className="contacts-hr">
 				<p>
 					Responsive web development for businesses and personalities <br /> Individual design approach made simple
 				</p>

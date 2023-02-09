@@ -8,6 +8,13 @@ import "swiper/css";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
 
 const SwiperComponent = () => {
+	const pagination = {
+		clickable: true,
+		renderBullet: function (index, className) {
+			return '<span class="' + className + '">' + (index + 1) + "</span>";
+		},
+	};
+
 	const projects = [
 		{
 			img: "https://images.unsplash.com/photo-1598707630720-eb08ef27bc11?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -41,6 +48,8 @@ const SwiperComponent = () => {
 			grabCursor={true}
 			spaceBetween={200}
 			initialSlide={1}
+			pagination={pagination}
+			modules={[Pagination]}
 		>
 			{projects.map((project, i) => (
 				<SwiperSlide key={i}>
