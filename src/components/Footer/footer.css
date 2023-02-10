@@ -1,5 +1,5 @@
 .contacts {
-  padding: 4.3rem 0rem 0rem 0rem;
+  padding: var(--tablet-padding);
   color: var(--primary-text-color);
 }
 
@@ -251,7 +251,6 @@
   left: 100px;
 }
 
-
 .text-flicker-in-glow {
   animation: text-flicker-in-glow 4s linear both;
 }
@@ -383,7 +382,11 @@
   }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 480px) {
+  .contacts-hr {
+    margin-top: 6rem;
+  }
+
   .contacts {
     display: flex;
     flex-direction: column;
@@ -391,7 +394,9 @@
   }
 
   .contacts-contacts h2 {
+    text-align: center;
     margin-bottom: 1.5rem;
+    margin-left: 0;
   }
 
   .contacts-container {
@@ -400,7 +405,8 @@
   }
 
   .email-phone {
-    max-width: 100%;
+    width: 100%;
+    margin: 0;
   }
 
   .send-form-button {
@@ -414,7 +420,8 @@
     width: 100%;
   }
 
-  .contacts-location {
+  .contacts-location,
+  .contacts-location p {
     display: none;
   }
 
@@ -447,30 +454,28 @@
 
 }
 
-@media(max-width: 480px) {
+@media (min-width: 481px) and (max-width: 768px) {
 
-  .contacts-contacts h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    margin-left: 0;
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    padding: var(--tablet-padding);
+    padding-bottom: 0.5rem;
   }
 
-  .email-phone {
+  .contacts-container {
+    display: block;
+    padding-bottom: 22rem;
+  }
+
+  .contacts-form {
+    top: 14.5rem;
     width: 100%;
-    margin: 0;
   }
 
-  .contacts-location img,
-  .contacts-location p {
-    display: none;
+  .send-form-button {
+    bottom: -9.5rem;
   }
-
-  .contacts-hr {
-    margin-top: 6rem;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 699px) {
 
   .contacts-contacts h2 {
     text-align: center;
@@ -506,11 +511,10 @@
     font-size: 14px;
     margin-left: 0%;
   }
-
 }
 
-@media screen and (min-width: 700px) and (max-width: 1115px) {
-  contacts {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .contacts {
     display: flex;
     flex-direction: column;
     padding: var(--tablet-padding);
@@ -561,20 +565,7 @@
     margin: 0;
   }
 
-  .footer-hr {
+  .contacts-hr {
     margin-top: 6rem;
-  }
-
-}
-
-@media screen and (min-width: 1116px) and (max-width: 1440px) {
-
-  .contacts-contacts h2 {
-    margin-bottom: 1.5rem;
-    margin-left: 9%;
-  }
-
-  .contacts {
-    padding: var(--tablet-padding);
   }
 }

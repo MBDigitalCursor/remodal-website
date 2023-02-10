@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setActiveNavLink, setScrollToLink, setShowMobileNav } from "../../store/generalStore";
+import { setActiveNavLink, setShowMobileNav } from "../../store/generalStore";
 import { FaBars } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import "./nav.css";
@@ -10,6 +10,7 @@ function Nav() {
 	const { activeNavLink, showMobileNav } = useSelector((state) => state.generalSlice);
 
 	const handleLinkColor = (i) => {
+		console.log("i ===", i);
 		dispatch(setActiveNavLink(i));
 	};
 
@@ -19,40 +20,36 @@ function Nav() {
 
 	const links = ["About", "Services", "Portfolio", "Contacts"];
 
-	// const handleClickScroll = (i) => {
-	// 	const sectionScrollTo = links[i].toLowerCase();
-	// 	const element = document.querySelector(`.${sectionScrollTo}`);
-	// 	if (element) {
-	// 		element.scrollIntoView({ behavior: "smooth" });
-	// 	}
-	// };
-
 	const handleClickScroll = (i) => {
 		const sectionScrollTo = links[i].toLowerCase();
 		const element = document.querySelector(`.${sectionScrollTo}`);
 		if (element) {
-			const startingY = window.pageYOffset;
 			const targetY = element.getBoundingClientRect().top + window.pageYOffset;
-			const diff = targetY - startingY;
-			const easing = (t) => (t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1);
-			let start;
+			const easing = (t) => (t < 0.4 ? 1 * t * t * t : (t - 0.5) * (2 * t - 2) * (2 * t - 2) + 1);
+			const start = performance.now();
+			const duration = 1500;
 
 			window.requestAnimationFrame(function step(timestamp) {
-				if (!start) start = timestamp;
 				const time = timestamp - start;
-				const percent = Math.min(time / 1000, 1);
-				window.scrollTo(0, startingY + diff * easing(percent));
-				if (time < 1000) {
+				const percent = Math.min(time / duration, 1);
+				const diff = targetY - window.pageYOffset;
+				const easingDiff = diff * easing(percent);
+
+				window.scrollTo(0, window.pageYOffset + easingDiff);
+
+				if (time < duration) {
 					window.requestAnimationFrame(step);
 				}
 			});
 		}
 	};
 
+	const scrollToTop = () => {};
+
 	return (
 		<nav>
 			<div className="nav container">
-				<p>remodal.</p>
+				<p onClick={scrollToTop}>remodal.</p>
 				<div className={showMobileNav ? "links-container show slide-in-right-nav" : "links-container hidden"}>
 					{links.map((link, i) => (
 						<li

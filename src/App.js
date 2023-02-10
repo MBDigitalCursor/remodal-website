@@ -51,16 +51,18 @@ function App() {
 	});
 
 	return (
-		<div className="App">
+		<>
 			<Nav />
-			<HeroRectangles />
-			<Hero />
-			<AboutFingers />
-			<About />
-			<Services />
-			<Portfolio />
-			<Footer />
-		</div>
+			<div className="App">
+				<HeroRectangles />
+				<Hero />
+				<AboutFingers />
+				<About />
+				<Services />
+				<Portfolio />
+				<Footer />
+			</div>
+		</>
 	);
 }
 

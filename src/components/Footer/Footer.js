@@ -132,7 +132,7 @@ function Footer() {
 							<label htmlFor="Email">E-mail address</label>
 						)}
 						<input
-							autocomplete="off"
+							autoComplete="off"
 							onChange={() => {
 								handleShowSend();
 								dispatch(setFormEmailErrorMsg(null));
