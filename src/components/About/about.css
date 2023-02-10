@@ -1,7 +1,7 @@
 .about {
   color: var(--primary-text-color);
   text-align: left;
-  padding: 4.3rem 0rem;
+  padding: var(--tablet-padding);
   position: relative;
   z-index: 0;
 }
@@ -98,9 +98,14 @@
 
 @media(max-width: 480px) {
 
+  .about {
+    padding: var(--mobile-padding);
+  }
+
   .about-cards {
     flex-direction: column;
     margin-bottom: 10rem;
+    gap: 0;
   }
 
   .single-about-card {
@@ -111,6 +116,7 @@
     align-items: center;
     justify-content: flex-start;
     padding-left: 0;
+    border: none;
   }
 
   .single-about-card .single-card-desc {
@@ -133,76 +139,56 @@
   }
 }
 
-@media(max-width: 699px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
   .about {
-    padding: var(--mobile-padding);
+    padding: var(--tablet-padding);
   }
 
   .about-cards {
-    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
     gap: 0;
   }
 
-  .about-cards div {
-    border: none;
-    display: flex;
-  }
-
-  .single-card-desc {
-    display: flex;
-    flex-direction: column;
-  }
-
   .single-about-card {
-    width: 100%;
+    max-width: 100%;
+    gap: 0;
+    margin-bottom: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0;
+    border: none;
+  }
+
+  .single-about-card .single-card-desc {
+    margin-left: 2rem;
+  }
+
+  .single-about-card p {
+    display: none;
   }
 
   .single-about-card img {
-    width: 50%;
+    max-width: 120px;
   }
 
   .tools-icons-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
+    margin-bottom: 10rem;
   }
 
 }
 
-@media screen and (min-width: 700px) and (max-width: 1115px) {
-
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .about {
     padding: var(--tablet-padding);
   }
 
   .about-cards {
-    gap: 12%;
-  }
-
-  .top {
-    width: 45%;
-  }
-
-  .mid {
-    width: 35%;
-  }
-
-  .top,
-  .mid {
-    display: flex;
-  }
-
-  .tools-icons-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-
-}
-
-@media screen and (min-width: 1116px) and (max-width: 1440px) {
-  .about {
-    padding: var(--tablet-padding);
+    gap: 5rem;
   }
 }

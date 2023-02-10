@@ -36,6 +36,7 @@ const SwiperComponent = () => {
 
 	return (
 		<Swiper
+			initialSlide={1}
 			pagination={true}
 			modules={[Pagination]}
 		>

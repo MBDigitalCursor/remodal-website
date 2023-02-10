@@ -1,5 +1,5 @@
 .portfolio {
-  padding: 4.3rem 0rem;
+  padding: var(--tablet-padding);
   padding-bottom: 15rem;
   color: var(--primary-text-color);
   margin-bottom: 17rem;
@@ -121,7 +121,7 @@
   }
 
   .portfolio {
-    padding-bottom: 0rem;
+    padding: var(--mobile-padding);
   }
 
   .portoflio-title h2 {
@@ -138,18 +138,17 @@
     align-items: start;
     gap: 1rem;
     margin-bottom: 10rem;
-    padding: var(--mobile-padding);
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 699px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
 
   .portfolio {
-    padding-bottom: 5rem;
+    padding: var(--tablet-padding);
+    margin-bottom: 5rem;
   }
 
   .portfolio-desc {
-    padding: var(--mobile-padding);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -162,17 +161,17 @@
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1115px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
   .portfolio {
-    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+    padding: var(--tablet-padding);
   }
 
   .portfolio-desc {
     flex-direction: column;
     align-items: start;
     gap: 1rem;
-    padding: var(--tablet-padding);
   }
 
   .portoflio-title {
@@ -182,12 +181,5 @@
   .portfolio-title h3 {
     font-size: var(--font-md);
     margin-bottom: 1.1rem;
-  }
-}
-
-@media screen and (min-width: 1116px) and (max-width: 1440px) {
-  .portfolio {
-    padding: var(--tablet-padding);
-
   }
 }

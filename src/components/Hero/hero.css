@@ -1,7 +1,7 @@
 .hero {
   min-height: 70vh;
   display: flex;
-  padding: 4.3rem 0rem 25rem 0;
+  padding: var(--tablet-padding);
   position: relative;
 }
 
@@ -204,7 +204,7 @@
   }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1115px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
 
   .hero {
     padding: var(--tablet-padding);
@@ -228,7 +228,7 @@
   }
 }
 
-@media screen and (min-width: 1116px) and (max-width: 1440px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .hero {
     padding: var(--tablet-padding);
   }
