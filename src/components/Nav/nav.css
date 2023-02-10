@@ -80,6 +80,9 @@ nav {
   }
 
   .links-container.show {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     text-align: left;
     position: absolute;
     display: flex;
@@ -87,10 +90,10 @@ nav {
     gap: 3rem;
     right: 0;
     top: 0;
-    padding: 8rem 3rem;
+    padding: 6rem 3rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background-color: var(--primary-bg-color);
+    background-color: #1d1c1cf0;
   }
 
   .nav-burger,
@@ -117,6 +120,7 @@ nav {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .nav {
     padding: var(--tablet-padding);
+
   }
 
   .links-container.hidden {
@@ -124,6 +128,9 @@ nav {
   }
 
   .links-container.show {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     text-align: left;
     position: absolute;
     display: flex;
@@ -134,7 +141,8 @@ nav {
     padding: 8rem 3rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background-color: var(--primary-bg-color);
+    background-color: #1d1c1cf0;
+    ;
   }
 
   .nav-burger,

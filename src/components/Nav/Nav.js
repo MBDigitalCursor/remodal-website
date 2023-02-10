@@ -10,13 +10,10 @@ function Nav() {
 	const { activeNavLink, showMobileNav } = useSelector((state) => state.generalSlice);
 	const links = ["About", "Services", "Portfolio", "Contacts"];
 
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
-
 	const handleLinkColor = (i) => {
 		console.log("i ===", i);
 		dispatch(setActiveNavLink(i));
+		dispatch(setShowMobileNav(false));
 	};
 
 	const openMobileNav = () => {

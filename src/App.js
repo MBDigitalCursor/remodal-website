@@ -21,6 +21,8 @@ function App() {
 	const intervalRef = useRef();
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
+
 		const wordsAndAnimations = [
 			{
 				word: "stand tall",
