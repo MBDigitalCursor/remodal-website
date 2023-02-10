@@ -1,4 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import { SiJavascript, SiReact, SiRedux, SiNodedotjs, SiExpress, SiHtml5, SiCss3, SiFigma, SiAdobeillustrator, SiTailwindcss, SiMaterialui } from "react-icons/si";
+import { FaSass } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+
 import "./services.css";
 
 function Services() {
@@ -20,6 +23,23 @@ function Services() {
 					We are here to craft you unique corporate, e-commerce or personal digital <br /> home to stand out from the pack and tell the story with on-going support. <br /> Enhance your online presence
 				</p>
 				<button className="services-btn services-in-left-port-btn services-btn-overlay">Let’s build your website</button>
+				<div className="tools-container">
+					<h2 className="tools-h2">Development tools and technologies</h2>
+					<div className="tools-icons-container">
+						<SiHtml5 />
+						<SiJavascript />
+						<SiReact />
+						<SiRedux />
+						<SiNodedotjs />
+						<SiExpress />
+						<SiCss3 />
+						<FaSass />
+						<SiTailwindcss />
+						<SiMaterialui />
+						<SiFigma />
+						<SiAdobeillustrator />
+					</div>
+				</div>
 			</div>
 			<div className="services-screens">
 				<div className={`phone ${isVibrating ? "vibrate-1" : ""}`}></div>

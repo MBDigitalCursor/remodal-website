@@ -1,11 +1,12 @@
 .hero {
-  min-height: 70vh;
+  min-height: 100vh;
   display: flex;
   padding: var(--tablet-padding);
   position: relative;
 }
 
 .hero-title {
+  margin-top: 10rem;
   color: var(--primary-text-color);
   text-align: left;
 }

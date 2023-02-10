@@ -9,7 +9,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   color: var(--primary-text-color);
-  padding: var(--tablet-padding);
+  padding: 1rem 3rem;
 }
 
 /* logo */

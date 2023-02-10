@@ -6,11 +6,7 @@ function Portfolio() {
 	return (
 		<div className="portfolio container">
 			<div className="portfolio-desc">
-				<div className="portfolio-title">
-					<h2>Our works</h2>
-					<h3>Juggling artistic concepts with product mindset</h3>
-				</div>
-				<button className="portfolio-btn port-btn-overlay scale-in-left-port-btn">Get in touch</button>
+				<h2>Swipe to see our works</h2>
 			</div>
 			<Swiper />
 		</div>

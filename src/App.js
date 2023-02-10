@@ -56,7 +56,7 @@ function App() {
 			<div className="App">
 				<HeroRectangles />
 				<Hero />
-				<AboutFingers />
+				{/* <AboutFingers /> */}
 				<About />
 				<Services />
 				<Portfolio />
