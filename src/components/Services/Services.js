@@ -22,7 +22,7 @@ function Services() {
 				<p>
 					We are here to craft you unique corporate, e-commerce or personal digital <br /> home to stand out from the pack and tell the story with on-going support. <br /> Enhance your online presence
 				</p>
-				<button className="services-btn services-in-left-port-btn services-btn-overlay">Let’s build your website</button>
+				<button className="services-btn services-in-left-port-btn services-btn-overlay">Let’s build</button>
 				<div className="tools-container">
 					<h2 className="tools-h2">Development tools and technologies</h2>
 					<div className="tools-icons-container">

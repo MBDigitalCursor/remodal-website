@@ -83,115 +83,115 @@ function Footer() {
 						<p>Vilnius, Lithuania</p>
 					</div>
 				</div>
-				<div className="contacts-form">
-					<div className="form-buttons">
-						<label className="switch btn-color-mode-switch">
+				<div className="contacts-form-container">
+					<div className="contacts-form">
+						<div className="form-buttons">
+							<label className="switch btn-color-mode-switch">
+								<input
+									type="checkbox"
+									name="color_mode"
+									id="color_mode"
+									value="1"
+								/>
+								<label
+									htmlFor="color_mode"
+									data-on="Schedule a call"
+									data-off="Fill in form"
+									className="btn-color-mode-switch-inner"
+								></label>
+							</label>
+						</div>
+						<form onSubmit={(e) => handleSubmit(e)}>
+							{formNameErrorMsg ? (
+								<label
+									className="formError"
+									htmlFor="First name"
+								>
+									{formNameErrorMsg}
+								</label>
+							) : (
+								<label htmlFor="First name">First name</label>
+							)}
 							<input
-								type="checkbox"
-								name="color_mode"
-								id="color_mode"
-								value="1"
+								autoComplete="off"
+								onChange={() => {
+									handleShowSend();
+									dispatch(setFormNameErrorMsg(null));
+								}}
+								ref={nameRef}
+								type="text"
+								name="First name"
 							/>
-							<label
-								htmlFor="color_mode"
-								data-on="Schedule a call"
-								data-off="Fill in form"
-								className="btn-color-mode-switch-inner"
-							></label>
-						</label>
+							{formEmailErrorMsg ? (
+								<label
+									className="formError"
+									htmlFor="Email"
+								>
+									{formEmailErrorMsg}
+								</label>
+							) : (
+								<label htmlFor="Email">E-mail address</label>
+							)}
+							<input
+								autoComplete="off"
+								onChange={() => {
+									handleShowSend();
+									dispatch(setFormEmailErrorMsg(null));
+								}}
+								ref={emailRef}
+								type="text"
+								name="Email"
+							/>
+							{formNumberErrorMsg ? (
+								<label
+									className="formError"
+									htmlFor="Phone number"
+								>
+									{formNumberErrorMsg}
+								</label>
+							) : (
+								<label htmlFor="Phone number">Phone number</label>
+							)}
+							<input
+								autoComplete="off"
+								onChange={() => {
+									handleShowSend();
+									dispatch(setFormNumberErrorMsg(null));
+								}}
+								ref={phoneRef}
+								type="text"
+								name="Phone number"
+								placeholder="+3706*******"
+							/>
+							{formDescErrorMsg ? (
+								<label
+									className="formError"
+									htmlFor="Description"
+								>
+									{formDescErrorMsg}
+								</label>
+							) : (
+								<label htmlFor="Description">Brief description</label>
+							)}
+							<input
+								autoComplete="off"
+								onChange={() => {
+									handleShowSend();
+									dispatch(setFormDescErrorMsg(null));
+								}}
+								ref={descRef}
+								type="text"
+								name="Description"
+							/>
+						</form>
 					</div>
-					<form onSubmit={(e) => handleSubmit(e)}>
-						{formNameErrorMsg ? (
-							<label
-								className="formError"
-								htmlFor="First name"
-							>
-								{formNameErrorMsg}
-							</label>
-						) : (
-							<label htmlFor="First name">First name</label>
-						)}
-						<input
-							autoComplete="off"
-							onChange={() => {
-								handleShowSend();
-								dispatch(setFormNameErrorMsg(null));
-							}}
-							ref={nameRef}
-							type="text"
-							name="First name"
-						/>
-						{formEmailErrorMsg ? (
-							<label
-								className="formError"
-								htmlFor="Email"
-							>
-								{formEmailErrorMsg}
-							</label>
-						) : (
-							<label htmlFor="Email">E-mail address</label>
-						)}
-						<input
-							autoComplete="off"
-							onChange={() => {
-								handleShowSend();
-								dispatch(setFormEmailErrorMsg(null));
-							}}
-							ref={emailRef}
-							type="text"
-							name="Email"
-						/>
-						{formNumberErrorMsg ? (
-							<label
-								className="formError"
-								htmlFor="Phone number"
-							>
-								{formNumberErrorMsg}
-							</label>
-						) : (
-							<label htmlFor="Phone number">Phone number</label>
-						)}
-						<input
-							autoComplete="off"
-							onChange={() => {
-								handleShowSend();
-								dispatch(setFormNumberErrorMsg(null));
-							}}
-							ref={phoneRef}
-							type="text"
-							name="Phone number"
-							placeholder="+3706*******"
-						/>
-						{formDescErrorMsg ? (
-							<label
-								className="formError"
-								htmlFor="Description"
-							>
-								{formDescErrorMsg}
-							</label>
-						) : (
-							<label htmlFor="Description">Brief description</label>
-						)}
-						<input
-							autoComplete="off"
-							onChange={() => {
-								handleShowSend();
-								dispatch(setFormDescErrorMsg(null));
-							}}
-							ref={descRef}
-							type="text"
-							name="Description"
-						/>
-					</form>
-				</div>{" "}
-				{showSendButton && (
 					<button
-						className="send-form-button send-form-btn-overlay send-form-left-port-btn"
+						className={`${showSendButton ? "send-form-button send-form-btn-overlay send-form-left-port-btn" : "hide-send-button"}`}
 						onClick={handleSubmit}
 					>
 						Send
 					</button>
-				)}
+				</div>
 			</div>
 			<div className="contacts-hr">
 				<p>
