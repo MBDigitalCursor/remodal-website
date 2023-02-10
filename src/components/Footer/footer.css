@@ -197,6 +197,17 @@
   animation: text-flicker-in-glow 4s linear both;
 }
 
+.date-time {
+  padding: 10.2rem;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #313131;
+  border-radius: 15px;
+}
+
 @keyframes text-flicker-in-glow {
   0% {
     opacity: 0;

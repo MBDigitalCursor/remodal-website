@@ -31,7 +31,7 @@
 }
 
 .react-switch-checkbox:checked+.react-switch-button {
-  left: calc(100% - 21.4rem);
+  left: calc(100% - 49.8%);
   transform: translateX(-100% -2px);
 }
 
@@ -68,12 +68,4 @@
 
 .react-switch-labels>span {
   z-index: 1;
-}
-
-.react-switch-checkbox:checked+.react-switch .react-switch-labels span:first-child {
-  color: blueviolet;
-}
-
-.react-switch-checkbox:not(:checked)+.react-switch .react-switch-labels span:first-child {
-  color: greenyellow;
 }

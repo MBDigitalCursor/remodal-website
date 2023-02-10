@@ -4,12 +4,12 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 import { GoMarkGithub } from "react-icons/go";
 import axios from "axios";
-import { setFormDescErrorMsg, setFormEmailErrorMsg, setFormNameErrorMsg, setFormNumberErrorMsg, setShowSendButton } from "../../store/generalStore";
+import { setFormDescErrorMsg, setFormEmailErrorMsg, setFormNameErrorMsg, setFormNumberErrorMsg, setShowCalendar, setShowSendButton } from "../../store/generalStore";
 import { useDispatch, useSelector } from "react-redux";
 import Switch from "./Switch/Switch";
 
 function Footer() {
-	const { showSendButton, formDescErrorMsg, formNumberErrorMsg, formEmailErrorMsg, formNameErrorMsg } = useSelector((state) => state.generalSlice);
+	const { showSendButton, formDescErrorMsg, formNumberErrorMsg, formEmailErrorMsg, formNameErrorMsg, showCalendar } = useSelector((state) => state.generalSlice);
 	const dispatch = useDispatch();
 	const nameRef = useRef();
 	const emailRef = useRef();
@@ -92,92 +92,101 @@ function Footer() {
 							<Switch
 								onColor="#D9D9D9"
 								isOn={value}
-								handleToggle={() => setValue(!value)}
+								handleToggle={() => {
+									setValue(!value);
+									dispatch(setShowCalendar(!showCalendar));
+								}}
 							/>
 						</div>
-						<form onSubmit={(e) => handleSubmit(e)}>
-							{formNameErrorMsg ? (
-								<label
-									className="formError"
-									htmlFor="First name"
-								>
-									{formNameErrorMsg}
-								</label>
-							) : (
-								<label htmlFor="First name">First name</label>
-							)}
-							<input
-								autoComplete="off"
-								onChange={() => {
-									handleShowSend();
-									dispatch(setFormNameErrorMsg(null));
-								}}
-								ref={nameRef}
-								type="text"
-								name="First name"
-							/>
-							{formEmailErrorMsg ? (
-								<label
-									className="formError"
-									htmlFor="Email"
-								>
-									{formEmailErrorMsg}
-								</label>
-							) : (
-								<label htmlFor="Email">E-mail address</label>
-							)}
-							<input
-								autoComplete="off"
-								onChange={() => {
-									handleShowSend();
-									dispatch(setFormEmailErrorMsg(null));
-								}}
-								ref={emailRef}
-								type="text"
-								name="Email"
-							/>
-							{formNumberErrorMsg ? (
-								<label
-									className="formError"
-									htmlFor="Phone number"
-								>
-									{formNumberErrorMsg}
-								</label>
-							) : (
-								<label htmlFor="Phone number">Phone number</label>
-							)}
-							<input
-								autoComplete="off"
-								onChange={() => {
-									handleShowSend();
-									dispatch(setFormNumberErrorMsg(null));
-								}}
-								ref={phoneRef}
-								type="text"
-								name="Phone number"
-								placeholder="+3706*******"
-							/>
-							{formDescErrorMsg ? (
-								<label
-									className="formError"
-									htmlFor="Description"
-								>
-									{formDescErrorMsg}
-								</label>
-							) : (
-								<label htmlFor="Description">Brief description</label>
-							)}
-							<input
-								autoComplete="off"
-								onChange={() => {
-									handleShowSend();
-									dispatch(setFormDescErrorMsg(null));
-								}}
-								ref={descRef}
-								type="text"
-								name="Description"
-							/>
-						</form>
+						{showCalendar ? (
+							<div className="date-time">
+								<input type="datetime-local" />
+							</div>
+						) : (
+							<form onSubmit={(e) => handleSubmit(e)}>
+								{formNameErrorMsg ? (
+									<label
+										className="formError"
+										htmlFor="First name"
+									>
+										{formNameErrorMsg}
+									</label>
+								) : (
+									<label htmlFor="First name">First name</label>
+								)}
+								<input
+									autoComplete="off"
+									onChange={() => {
+										handleShowSend();
+										dispatch(setFormNameErrorMsg(null));
+									}}
+									ref={nameRef}
+									type="text"
+									name="First name"
+								/>
+								{formEmailErrorMsg ? (
+									<label
+										className="formError"
+										htmlFor="Email"
+									>
+										{formEmailErrorMsg}
+									</label>
+								) : (
+									<label htmlFor="Email">E-mail address</label>
+								)}
+								<input
+									autoComplete="off"
+									onChange={() => {
+										handleShowSend();
+										dispatch(setFormEmailErrorMsg(null));
+									}}
+									ref={emailRef}
+									type="text"
+									name="Email"
+								/>
+								{formNumberErrorMsg ? (
+									<label
+										className="formError"
+										htmlFor="Phone number"
+									>
+										{formNumberErrorMsg}
+									</label>
+								) : (
+									<label htmlFor="Phone number">Phone number</label>
+								)}
+								<input
+									autoComplete="off"
+									onChange={() => {
+										handleShowSend();
+										dispatch(setFormNumberErrorMsg(null));
+									}}
+									ref={phoneRef}
+									type="text"
+									name="Phone number"
+									placeholder="+3706*******"
+								/>
+								{formDescErrorMsg ? (
+									<label
+										className="formError"
+										htmlFor="Description"
+									>
+										{formDescErrorMsg}
+									</label>
+								) : (
+									<label htmlFor="Description">Brief description</label>
+								)}
+								<input
+									autoComplete="off"
+									onChange={() => {
+										handleShowSend();
+										dispatch(setFormDescErrorMsg(null));
+									}}
+									ref={descRef}
+									type="text"
+									name="Description"
+								/>
+							</form>
+						)}
 					</div>
 					<button
 						className={`${showSendButton ? "send-form-button send-form-btn-overlay send-form-left-port-btn" : "hide-send-button"}`}

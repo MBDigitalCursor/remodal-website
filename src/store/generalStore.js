@@ -14,6 +14,7 @@ export const generalSlice = createSlice({
 		formEmailErrorMsg: null,
 		formNumberErrorMsg: null,
 		formDescErrorMsg: null,
+		showCalendar: false,
 	},
 	reducers: {
 		setActiveNavLink: (state, action) => {
@@ -40,9 +41,12 @@ export const generalSlice = createSlice({
 		setFormDescErrorMsg: (state, action) => {
 			state.formDescErrorMsg = action.payload;
 		},
+		setShowCalendar: (state, action) => {
+			state.showCalendar = action.payload;
+		},
 	},
 });
 
-export const { setActiveNavLink, setShowMobileNav, setHeroChangingText, setShowSendButton, setFormErrorMsg, setFormNameErrorMsg, setFormEmailErrorMsg, setFormNumberErrorMsg, setFormDescErrorMsg } = generalSlice.actions;
+export const { setActiveNavLink, setShowMobileNav, setHeroChangingText, setShowSendButton, setFormErrorMsg, setFormNameErrorMsg, setFormEmailErrorMsg, setFormNumberErrorMsg, setFormDescErrorMsg, setShowCalendar } = generalSlice.actions;
 
 export default generalSlice.reducer;
