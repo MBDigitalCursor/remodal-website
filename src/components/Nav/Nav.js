@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setActiveNavLink, setShowMobileNav } from "../../store/generalStore";
 import { FaBars } from "react-icons/fa";
@@ -8,6 +8,11 @@ import "./nav.css";
 function Nav() {
 	const dispatch = useDispatch();
 	const { activeNavLink, showMobileNav } = useSelector((state) => state.generalSlice);
+	const links = ["About", "Services", "Portfolio", "Contacts"];
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	const handleLinkColor = (i) => {
 		console.log("i ===", i);
@@ -17,8 +22,6 @@ function Nav() {
 	const openMobileNav = () => {
 		dispatch(setShowMobileNav(!showMobileNav));
 	};
-
-	const links = ["About", "Services", "Portfolio", "Contacts"];
 
 	const handleClickScroll = (i) => {
 		const sectionScrollTo = links[i].toLowerCase();
@@ -44,7 +47,25 @@ function Nav() {
 		}
 	};
 
-	const scrollToTop = () => {};
+	const scrollToTop = () => {
+		const targetY = 0;
+		const easing = (t) => (t < 0.4 ? 1 * t * t * t : (t - 0.5) * (2 * t - 2) * (2 * t - 2) + 1);
+		const start = performance.now();
+		const duration = 1500;
+
+		window.requestAnimationFrame(function step(timestamp) {
+			const time = timestamp - start;
+			const percent = Math.min(time / duration, 1);
+			const diff = targetY - window.pageYOffset;
+			const easingDiff = diff * easing(percent);
+
+			window.scrollTo(0, window.pageYOffset + easingDiff);
+
+			if (time < duration) {
+				window.requestAnimationFrame(step);
+			}
+		});
+	};
 
 	return (
 		<nav>

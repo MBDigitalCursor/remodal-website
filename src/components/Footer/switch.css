@@ -1,0 +1,8 @@
+ .switch {
+   background-color: rgb(146, 65, 65);
+   min-width: 100%;
+ }
+
+ .Mui-checked {
+   width: 50%;
+ }

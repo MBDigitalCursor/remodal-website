@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "./footer.css";
+import "./switch.css";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 import { GoMarkGithub } from "react-icons/go";
@@ -59,7 +60,6 @@ function Footer() {
 			dispatch(setShowSendButton(false));
 		}
 	};
-
 	return (
 		<div className="contacts container">
 			<div className="contacts-container">
@@ -85,22 +85,7 @@ function Footer() {
 				</div>
 				<div className="contacts-form-container">
 					<div className="contacts-form">
-						<div className="form-buttons">
-							<label className="switch btn-color-mode-switch">
-								<input
-									type="checkbox"
-									name="color_mode"
-									id="color_mode"
-									value="1"
-								/>
-								<label
-									htmlFor="color_mode"
-									data-on="Schedule a call"
-									data-off="Fill in form"
-									className="btn-color-mode-switch-inner"
-								></label>
-							</label>
-						</div>
+						<div className="form-buttons"></div>
 						<form onSubmit={(e) => handleSubmit(e)}>
 							{formNameErrorMsg ? (
 								<label

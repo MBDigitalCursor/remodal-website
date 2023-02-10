@@ -35,7 +35,6 @@ function About() {
 
 	return (
 		<div className="about container">
-			<h3 className="mobile-h3">Our band and tools</h3>
 			<h2>Our band</h2>
 			<div className="about-cards">
 				{teamMembers.map((member, i) => (

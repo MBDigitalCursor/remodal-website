@@ -13,6 +13,31 @@ function Services() {
 		}, 2000);
 		return () => clearInterval(intervalId);
 	}, []);
+	const links = ["About", "Services", "Portfolio", "Contacts"];
+
+	const handleClickScroll = (i) => {
+		const sectionScrollTo = links[i].toLowerCase();
+		const element = document.querySelector(`.${sectionScrollTo}`);
+		if (element) {
+			const targetY = element.getBoundingClientRect().top + window.pageYOffset;
+			const easing = (t) => (t < 0.4 ? 1 * t * t * t : (t - 0.5) * (2 * t - 2) * (2 * t - 2) + 1);
+			const start = performance.now();
+			const duration = 1500;
+
+			window.requestAnimationFrame(function step(timestamp) {
+				const time = timestamp - start;
+				const percent = Math.min(time / duration, 1);
+				const diff = targetY - window.pageYOffset;
+				const easingDiff = diff * easing(percent);
+
+				window.scrollTo(0, window.pageYOffset + easingDiff);
+
+				if (time < duration) {
+					window.requestAnimationFrame(step);
+				}
+			});
+		}
+	};
 
 	return (
 		<div className="services container">
@@ -22,7 +47,12 @@ function Services() {
 				<p>
 					We are here to craft you unique corporate, e-commerce or personal digital <br /> home to stand out from the pack and tell the story with on-going support. <br /> Enhance your online presence
 				</p>
-				<button className="services-btn services-in-left-port-btn services-btn-overlay">Let’s build</button>
+				<button
+					onClick={() => handleClickScroll(3)}
+					className="services-btn services-in-left-port-btn services-btn-overlay"
+				>
+					Let’s build
+				</button>
 				<div className="tools-container">
 					<h2 className="tools-h2">Development tools and technologies</h2>
 					<div className="tools-icons-container">

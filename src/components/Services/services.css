@@ -34,7 +34,7 @@
 }
 
 .services-desc button {
-  width: 30%;
+  width: 20%;
 }
 
 .services-btn {
@@ -229,12 +229,16 @@
   }
 
   .services-desc {
-    margin-bottom: 10rem
+    margin-bottom: 10rem;
+    margin-top: 6rem;
   }
 
-  .services-desc h2,
-  .about h2 {
+  .services-desc h2 {
     font-size: 1.6rem;
+  }
+
+  .tools-container h2 {
+    font-size: 1rem;
   }
 
   .services-desc h3 {
@@ -244,22 +248,30 @@
   .services-desc p {
     font-size: 0.8rem;
     width: 100%;
+    margin-bottom: -2.5rem;
   }
 
   .services-btn {
     display: none;
   }
 
+  .services-screens {
+    left: 7rem;
+  }
+
   .services-screens .phone {
     display: block;
-    left: -7rem;
+    left: -10rem;
+    top: 7.2rem;
+    width: 42px;
+    height: 75px;
   }
 
   .tools-icons-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 10rem;
+    gap: 0.5rem;
+    margin-bottom: 0rem;
   }
 }
 
@@ -268,12 +280,20 @@
     padding: var(--tablet-padding)
   }
 
+  .services-desc {
+    margin: 0;
+  }
+
   .services-desc p {
     width: 100%;
   }
 
+  .services-btn {
+    width: 25%;
+  }
+
   .services-desc button {
-    width: 32%;
+    width: 40%;
   }
 
   .phone {
@@ -283,9 +303,11 @@
   .tools-icons-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 1rem;
     margin-bottom: 10rem;
   }
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -295,5 +317,9 @@
 
   .services-desc p {
     width: 70%;
+  }
+
+  .services-desc button {
+    width: 25%;
   }
 }

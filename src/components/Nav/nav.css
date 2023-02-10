@@ -16,6 +16,7 @@ nav {
 .nav p {
   font-size: 1.4rem;
   z-index: 1;
+  cursor: pointer;
 }
 
 .links-container {
@@ -70,6 +71,8 @@ nav {
 @media(max-width: 480px) {
   .nav {
     padding: var(--mobile-padding);
+    align-items: baseline;
+    padding-bottom: 0;
   }
 
   .links-container.hidden {
@@ -100,9 +103,8 @@ nav {
     color: var(--primary-text-color)
   }
 
-  .nav {
-    align-items: baseline;
-    padding-bottom: 0;
+  .nav p {
+    font-size: 1.2rem;
   }
 
   .nav ul {

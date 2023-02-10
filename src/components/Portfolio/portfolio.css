@@ -92,7 +92,12 @@
     flex-direction: column;
     align-items: start;
     gap: 1rem;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
+    padding-top: 0rem;
+  }
+
+  .portfolio-desc h2 {
+    margin-top: 5rem;
   }
 }
 
