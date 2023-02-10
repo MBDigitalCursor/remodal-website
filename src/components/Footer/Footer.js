@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import "./footer.css";
-import "./switch.css";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 import { GoMarkGithub } from "react-icons/go";
 import axios from "axios";
 import { setFormDescErrorMsg, setFormEmailErrorMsg, setFormNameErrorMsg, setFormNumberErrorMsg, setShowSendButton } from "../../store/generalStore";
 import { useDispatch, useSelector } from "react-redux";
+import Switch from "./Switch/Switch";
 
 function Footer() {
 	const { showSendButton, formDescErrorMsg, formNumberErrorMsg, formEmailErrorMsg, formNameErrorMsg } = useSelector((state) => state.generalSlice);
@@ -60,6 +60,9 @@ function Footer() {
 			dispatch(setShowSendButton(false));
 		}
 	};
+
+	const [value, setValue] = React.useState(false);
+
 	return (
 		<div className="contacts container">
 			<div className="contacts-container">
@@ -85,7 +88,13 @@ function Footer() {
 				</div>
 				<div className="contacts-form-container">
 					<div className="contacts-form">
-						<div className="form-buttons"></div>
+						<div className="switch-container">
+							<Switch
+								onColor="#D9D9D9"
+								isOn={value}
+								handleToggle={() => setValue(!value)}
+							/>
+						</div>
 						<form onSubmit={(e) => handleSubmit(e)}>
 							{formNameErrorMsg ? (
 								<label
