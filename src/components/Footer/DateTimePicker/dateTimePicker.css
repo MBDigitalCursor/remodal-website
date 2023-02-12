@@ -6,13 +6,26 @@
   border-radius: 10px;
 }
 
+.rdt {
+  padding: 0.115rem 0rem;
+}
+
 .rdtTime {
-  padding: 3.95rem;
+  padding: 3.95rem 2rem;
+}
+
+.rdtCounter .rdtCount {
+  height: 30%;
+}
+
+.rdtCounterSeparator {
+  position: relative;
+  top: 0.3rem;
 }
 
 .rdtMonths,
 .rdtYears {
-  padding: 2.50rem;
+  padding: 2.5rem;
 }
 
 .rdtPicker thead {
@@ -51,4 +64,55 @@ td.rdtYear:hover,
   outline: none;
   border: none;
   border-radius: 10px;
+}
+
+.date-time-wrapper {
+  position: relative
+}
+
+
+.date-time-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.date-time-inputs input {
+  margin-top: 2px;
+  height: 2.5rem;
+  min-width: 100%;
+  background-color: rgba(217, 217, 217, 0.11);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #D9D9D9;
+  font-size: var(--font-sm);
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+.call-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.call-form-container form {
+  padding: 27px 48px;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media(max-width: 480px) {
+  .call-form-container form {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .call-form-container form {
+    flex-direction: column;
+  }
 }

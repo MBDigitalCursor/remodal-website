@@ -6,10 +6,10 @@ import "./footer.css";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 import { GoMarkGithub } from "react-icons/go";
-import { setFormDescErrorMsg, setFormEmailErrorMsg, setFormNameErrorMsg, setFormNumberErrorMsg, setShowCalendar, setShowSendButton } from "../../store/generalStore";
+import { setFormDescErrorMsg, setFormEmailErrorMsg, setFormNameErrorMsg, setFormNumberErrorMsg, setShowCalendar, setShowFormSuccess, setShowSendButton } from "../../store/generalStore";
 import DateTimePicker from "./DateTimePicker/DateTimePicker";
 function Footer() {
-	const { showSendButton, formDescErrorMsg, formNumberErrorMsg, formEmailErrorMsg, formNameErrorMsg, showCalendar } = useSelector((state) => state.generalSlice);
+	const { showSendButton, formDescErrorMsg, formNumberErrorMsg, formEmailErrorMsg, formNameErrorMsg, showCalendar, showFormSuccess } = useSelector((state) => state.generalSlice);
 	const [value, setValue] = useState(false);
 	const dispatch = useDispatch();
 	const nameRef = useRef();
@@ -45,6 +45,7 @@ function Footer() {
 				dispatch(setFormNumberErrorMsg(null));
 				dispatch(setFormNameErrorMsg(null));
 				dispatch(setFormDescErrorMsg(null));
+				dispatch(setShowFormSuccess(true));
 			}
 		});
 
@@ -61,6 +62,12 @@ function Footer() {
 			dispatch(setShowSendButton(false));
 		}
 	};
+
+	useEffect(() => {
+		setTimeout(() => {
+			dispatch(setShowFormSuccess(false));
+		}, 5000);
+	}, [showFormSuccess, dispatch]);
 
 	useEffect(() => {
 		if (showCalendar) dispatch(setShowSendButton(false));
@@ -103,10 +110,7 @@ function Footer() {
 						</div>
 						{showCalendar ? (
 							<div className="date-time-wrapper">
-								<div className="date-time-container">
-									<DateTimePicker />
-								</div>
-								<button className="date-time-btn send-form-button send-form-btn-overlay send-form-left-port-btn">Book a call</button>
+								<DateTimePicker />
 							</div>
 						) : (
 							<form onSubmit={(e) => handleSubmit(e)}>
@@ -194,12 +198,20 @@ function Footer() {
 							</form>
 						)}
 					</div>
-					<button
-						className={`${showSendButton ? "send-form-button send-form-btn-overlay send-form-left-port-btn" : "hide-send-button"}`}
-						onClick={handleSubmit}
-					>
-						Send
-					</button>
+					{!showCalendar && (
+						<div>
+							{showFormSuccess ? (
+								<button className="send-form-button send-form-btn-overlay send-form-left-port-btn form-success">Form sent</button>
+							) : (
+								<button
+									className={`${showSendButton ? "send-form-button send-form-btn-overlay send-form-left-port-btn" : "hide-send-button"}`}
+									onClick={handleSubmit}
+								>
+									Send
+								</button>
+							)}
+						</div>
+					)}
 				</div>
 			</div>
 			<div className="contacts-hr">

@@ -16,12 +16,7 @@ const Switch = ({ isOn, handleToggle, onColor }) => {
 			<div className="react-switch-button" />
 			<div className="react-switch-labels">
 				<span style={{ color: isOn ? "#1D1C1C" : "#ffffff" }}>Fill in form</span>
-				<span
-					span
-					style={{ color: isOn ? "#ffffff" : "#1D1C1C" }}
-				>
-					Schedule call
-				</span>
+				<span style={{ color: isOn ? "#ffffff" : "#1D1C1C" }}>Schedule call</span>
 			</div>
 		</label>
 	);

@@ -11,7 +11,6 @@ function Nav() {
 	const links = ["About", "Services", "Portfolio", "Contacts"];
 
 	const handleLinkColor = (i) => {
-		console.log("i ===", i);
 		dispatch(setActiveNavLink(i));
 		dispatch(setShowMobileNav(false));
 	};

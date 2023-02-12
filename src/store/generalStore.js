@@ -15,6 +15,10 @@ export const generalSlice = createSlice({
 		formNumberErrorMsg: null,
 		formDescErrorMsg: null,
 		showCalendar: false,
+		showFormSuccess: false,
+		callFormNameErrorMsg: null,
+		callFormNumberErrorMsg: null,
+		callDateAndTime: null,
 	},
 	reducers: {
 		setActiveNavLink: (state, action) => {
@@ -44,9 +48,22 @@ export const generalSlice = createSlice({
 		setShowCalendar: (state, action) => {
 			state.showCalendar = action.payload;
 		},
+		setShowFormSuccess: (state, action) => {
+			state.showFormSuccess = action.payload;
+		},
+		setCallFormNameErrorMsg: (state, action) => {
+			state.callFormNameErrorMsg = action.payload;
+		},
+		setCallFormNumberErrorMsg: (state, action) => {
+			state.callFormNumberErrorMsg = action.payload;
+		},
+
+		setCallDateAndTime: (state, action) => {
+			state.callDateAndTime = action.payload;
+		},
 	},
 });
 
-export const { setActiveNavLink, setShowMobileNav, setHeroChangingText, setShowSendButton, setFormErrorMsg, setFormNameErrorMsg, setFormEmailErrorMsg, setFormNumberErrorMsg, setFormDescErrorMsg, setShowCalendar } = generalSlice.actions;
+export const { setActiveNavLink, setShowMobileNav, setHeroChangingText, setShowSendButton, setFormErrorMsg, setFormNameErrorMsg, setFormEmailErrorMsg, setFormNumberErrorMsg, setFormDescErrorMsg, setShowCalendar, setShowFormSuccess, setCallFormNameErrorMsg, setCallFormNumberErrorMsg, setCallDateAndTime } = generalSlice.actions;
 
 export default generalSlice.reducer;
