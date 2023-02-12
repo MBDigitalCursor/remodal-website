@@ -103,17 +103,20 @@ td.rdtYear:hover,
   display: flex;
   gap: 2rem;
   align-items: center;
+  max-height: 415px;
 }
 
 @media(max-width: 480px) {
   .call-form-container form {
     flex-direction: column;
+    max-height: 100%;
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .call-form-container form {
     flex-direction: column;
+    max-height: 100%;
   }
 }
 
