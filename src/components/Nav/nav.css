@@ -15,7 +15,7 @@ nav {
 /* logo */
 .nav p {
   font-size: 1.4rem;
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
 }
 
@@ -37,7 +37,7 @@ nav {
   color: var(--red)
 }
 
-.active-link {
+.links-container .active-link {
   color: var(--red)
 }
 
@@ -56,12 +56,12 @@ nav {
 
 @keyframes slide-in-right-nav {
   0% {
-    transform: translateX(1000px);
+    transform: translateY(-1000px);
     opacity: 0;
   }
 
   100% {
-    transform: translateX(0);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
@@ -140,7 +140,6 @@ nav {
     top: 0;
     padding: 8rem 3rem;
     padding-bottom: 4rem;
-    z-index: 2;
     background-color: #1d1c1cf0;
     ;
   }

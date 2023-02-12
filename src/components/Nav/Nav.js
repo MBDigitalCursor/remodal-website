@@ -27,7 +27,7 @@ function Nav() {
 			const targetY = element.getBoundingClientRect().top + window.pageYOffset;
 			const easing = (t) => (t < 0.4 ? 1 * t * t * t : (t - 0.5) * (2 * t - 2) * (2 * t - 2) + 1);
 			const start = performance.now();
-			const duration = 1500;
+			const duration = 1000;
 
 			window.requestAnimationFrame(function step(timestamp) {
 				const time = timestamp - start;
@@ -48,7 +48,7 @@ function Nav() {
 		const targetY = 0;
 		const easing = (t) => (t < 0.4 ? 1 * t * t * t : (t - 0.5) * (2 * t - 2) * (2 * t - 2) + 1);
 		const start = performance.now();
-		const duration = 1500;
+		const duration = 1000;
 
 		window.requestAnimationFrame(function step(timestamp) {
 			const time = timestamp - start;
@@ -62,6 +62,8 @@ function Nav() {
 				window.requestAnimationFrame(step);
 			}
 		});
+		dispatch(setShowMobileNav(false));
+		dispatch(setActiveNavLink(null));
 	};
 
 	return (

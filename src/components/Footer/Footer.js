@@ -1,15 +1,16 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Switch from "./Switch/Switch";
+import axios from "axios";
 import "./footer.css";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 import { GoMarkGithub } from "react-icons/go";
-import axios from "axios";
 import { setFormDescErrorMsg, setFormEmailErrorMsg, setFormNameErrorMsg, setFormNumberErrorMsg, setShowCalendar, setShowSendButton } from "../../store/generalStore";
-import { useDispatch, useSelector } from "react-redux";
-import Switch from "./Switch/Switch";
-
+import DateTimePicker from "./DateTimePicker/DateTimePicker";
 function Footer() {
 	const { showSendButton, formDescErrorMsg, formNumberErrorMsg, formEmailErrorMsg, formNameErrorMsg, showCalendar } = useSelector((state) => state.generalSlice);
+	const [value, setValue] = useState(false);
 	const dispatch = useDispatch();
 	const nameRef = useRef();
 	const emailRef = useRef();
@@ -61,7 +62,9 @@ function Footer() {
 		}
 	};
 
-	const [value, setValue] = React.useState(false);
+	useEffect(() => {
+		if (showCalendar) dispatch(setShowSendButton(false));
+	}, [showCalendar, dispatch]);
 
 	return (
 		<div className="contacts container">
@@ -99,8 +102,11 @@ function Footer() {
 							/>
 						</div>
 						{showCalendar ? (
-							<div className="date-time">
-								<input type="datetime-local" />
+							<div className="date-time-wrapper">
+								<div className="date-time-container">
+									<DateTimePicker />
+								</div>
+								<button className="date-time-btn send-form-button send-form-btn-overlay send-form-left-port-btn">Book a call</button>
 							</div>
 						) : (
 							<form onSubmit={(e) => handleSubmit(e)}>

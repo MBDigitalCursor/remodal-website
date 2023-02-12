@@ -1,0 +1,54 @@
+.rdtPicker {
+  color: var(--primary-text-color);
+  position: unset;
+  background-color: rgba(217, 217, 217, 0.11);
+  border: none;
+  border-radius: 10px;
+}
+
+.rdtTime {
+  padding: 3.95rem;
+}
+
+.rdtMonths,
+.rdtYears {
+  padding: 2.50rem;
+}
+
+.rdtPicker thead {
+  font-family: 'Poppins';
+}
+
+.rdtPicker thead tr:first-of-type th:hover,
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtActive,
+.rdtPicker .rdtTimeToggle:hover,
+.rdtCounter .rdtBtn:hover {
+  background: var(--primary-bg-color);
+  border-radius: 10px;
+}
+
+.rdtSwitch,
+.rdtPicker .dow {
+  font-weight: 300;
+}
+
+.rdtSwitch:hover,
+td.rdtMonth:hover,
+td.rdtYear:hover,
+.rdtPicker td.rdtActive:hover {
+  cursor: pointer;
+  background: var(--primary-bg-color);
+  border-radius: 10px;
+}
+
+.rdt input {
+  color: var(--primary-text-color);
+  width: 100%;
+  background-color: rgba(217, 217, 217, 0.11);
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}

@@ -197,8 +197,12 @@
   animation: text-flicker-in-glow 4s linear both;
 }
 
-.date-time {
-  padding: 10.2rem;
+.date-time-wrapper {
+  position: relative
+}
+
+.date-time-container {
+  padding: 2.17rem;
   display: flex;
   height: 100%;
   width: 100%;
@@ -206,6 +210,13 @@
   align-items: center;
   background-color: #313131;
   border-radius: 15px;
+}
+
+.date-time-btn {
+  width: 150px;
+  position: absolute;
+  right: 0;
+  bottom: -4rem;
 }
 
 @keyframes text-flicker-in-glow {
@@ -381,6 +392,9 @@
     display: none;
   }
 
+  .date-time-btn {
+    bottom: -4.2rem;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -388,7 +402,7 @@
   .contacts {
     display: flex;
     flex-direction: column;
-    padding: var(--mobile-padding);
+    padding: var(--tablet-padding);
   }
 
 
@@ -437,6 +451,10 @@
     display: none;
   }
 
+  .date-time-btn {
+    bottom: -4.2rem;
+  }
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -480,5 +498,9 @@
   .contacts-location,
   .contacts-location p {
     display: none;
+  }
+
+  .date-time-btn {
+    bottom: -4.2rem;
   }
 }
